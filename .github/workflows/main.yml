@@ -42,11 +42,19 @@ jobs:
           echo "No HTML output found. Deployment skipped."
           exit 1
 
-    - name: Cleanup files (optional)
-      if: always()
+    - name: Deploy to GitHub Pages
+      if: success()
       run: |
-        rm -rf Zaliczeniowy_autobusy/html
-        rm -rf Zaliczeniowy_autobusy/latex
-        rm -f Zaliczeniowy_autobusy/setup.py
-        rm -f requirements.txt
-        rm -f setup.py
+        if [ -d Zaliczeniowy_autobusy/html ]; then
+          git config --global user.email "katepavlichenko2@gmail.com"
+          git config --global user.name "kate"
+          git checkout --orphan gh-pages
+          git rm -rf .
+          cp -r Zaliczeniowy_autobusy/html/* .
+          git add .
+          git commit -m "Deploy Doxygen documentation"
+          git push origin gh-pages --force
+        else
+          echo "No HTML output found. Deployment skipped."
+          exit 1
+        fi
