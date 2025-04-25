@@ -32,7 +32,7 @@ jobs:
         git config --global user.name "kate"
         git checkout --orphan gh-pages
         git rm -rf .
-        cp -r docs/html/* .  
+        cp -r Zaliczeniowy_autobusy/html/* .
         git add .
         git commit -m "Deploy Doxygen documentation"
         git push origin gh-pages --force
