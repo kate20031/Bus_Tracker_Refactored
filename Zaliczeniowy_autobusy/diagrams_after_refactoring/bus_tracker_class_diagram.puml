@@ -1,1 +1,78 @@
+@startuml
 
+package "BusTracker" {
+  package "data_processing" {
+    class BusDataHandler {
+      +load_data()
+      +process_data()
+      +save_results()
+    }
+
+    class SpeedViolationChecker {
+      +calculate_speed()
+      +count_vehicles_over_speed_limit()
+      +get_violation_coordinates()
+    }
+
+    class SpeedViolationCheckerFactory {
+      +create_checker()
+    }
+
+    class SpeedCalculationFactory {
+      +create_strategy()
+    }
+
+    class PunctualityAnalyzer {
+      +analyze()
+    }
+
+    class ViolationClusterer {
+      +find_violations_places()
+    }
+
+    class GeoUtils {
+      +haversine_distance()
+    }
+
+    class APIUtils {
+      +connect_to_api()
+    }
+  }
+
+  package "tests" {
+    class TestConnectToAPI {
+      +test_connect_to_api()
+      +test_connect_to_api_invalid_url()
+    }
+
+    class TestBusDataCalculations {
+      +test_convert_to_dict()
+      +test_haversine_distance()
+      +test_process_data_invalid()
+      +test_save_results_invalid_file()
+      +test_save_results_overwrite()
+      +test_save_results_valid_file()
+    }
+
+    class TestSpeedViolationChecker {
+      +test_get_violation_coordinates_invalid_gps()
+      +test_get_violation_coordinates_multiple_violations()
+    }
+  }
+}
+
+BusDataHandler -[hidden]-> SpeedViolationChecker
+SpeedViolationChecker -[hidden]-> SpeedViolationCheckerFactory
+SpeedViolationCheckerFactory -[hidden]-> SpeedCalculationFactory
+SpeedCalculationFactory -[hidden]-> SpeedViolationChecker
+
+SpeedViolationChecker -> SpeedViolationCheckerFactory : creates
+SpeedViolationCheckerFactory -> SpeedCalculationFactory : creates
+SpeedCalculationFactory -> SpeedViolationChecker : uses
+
+BusDataHandler -> APIUtils : uses
+SpeedViolationChecker -> GeoUtils : uses
+ViolationClusterer -> GeoUtils : uses
+PunctualityAnalyzer -> BusDataHandler : uses
+
+@enduml
