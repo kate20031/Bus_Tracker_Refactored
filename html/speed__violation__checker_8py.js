@@ -1,4 +1,0 @@
-var speed__violation__checker_8py =
-[
-    [ "Zaliczeniowy_autobusy.BusTracker.data_processing.speed_violation_checker.SpeedViolationChecker", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker.html", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker" ]
-];

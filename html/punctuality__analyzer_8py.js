@@ -1,5 +1,0 @@
-var punctuality__analyzer_8py =
-[
-    [ "Zaliczeniowy_autobusy.BusTracker.data_processing.punctuality_analyzer.PunctualityAnalyzer", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1punctuality__analyzer_1_1_punctuality_analyzer.html", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1punctuality__analyzer_1_1_punctuality_analyzer" ],
-    [ "Zaliczeniowy_autobusy.BusTracker.data_processing.punctuality_analyzer.check_punctuality_accuracy", "punctuality__analyzer_8py.html#ae3817f3195ddeff18d0feff2fdd579f5", null ]
-];

@@ -1,4 +1,0 @@
-var test__bus__data__calculations_8py =
-[
-    [ "Zaliczeniowy_autobusy.BusTracker.tests.test_bus_data_calculations.TestBusDataCalculations", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations.html", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations" ]
-];

@@ -1,4 +1,0 @@
-var namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__speed__checker =
-[
-    [ "Test_Speed_Violation", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__speed__checker_1_1_test___speed___violation.html", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__speed__checker_1_1_test___speed___violation" ]
-];

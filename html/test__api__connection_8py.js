@@ -1,4 +1,0 @@
-var test__api__connection_8py =
-[
-    [ "Zaliczeniowy_autobusy.BusTracker.tests.test_api_connection.TestConnectToAPI", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__api__connection_1_1_test_connect_to_a_p_i.html", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__api__connection_1_1_test_connect_to_a_p_i" ]
-];
