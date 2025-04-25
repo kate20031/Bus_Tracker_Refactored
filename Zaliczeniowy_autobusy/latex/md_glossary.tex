@@ -1,0 +1,48 @@
+\chapter{Глосарій термінів проєкту \texorpdfstring{$<$}{<}strong\texorpdfstring{$>$}{>}Bus\+Tracker\texorpdfstring{$<$}{<}/strong\texorpdfstring{$>$}{>}}
+\hypertarget{md_glossary}{}\label{md_glossary}\index{Глосарій термінів проєкту $<$strong$>$BusTracker$<$/strong$>$@{Глосарій термінів проєкту $<$strong$>$BusTracker$<$/strong$>$}}
+\label{md_glossary_autotoc_md0}%
+\Hypertarget{md_glossary_autotoc_md0}%
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Термін   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Опис    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Термін   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Опис    }\\\cline{1-2}
+\endhead
+{\bfseries{Bus\+Tracker}}   &Назва системи, яка аналізує дані автобусів у місті Варшава.    \\\cline{1-2}
+{\bfseries{Bus Location Data}}   &Дані з координатами автобусів, що включають {\ttfamily Latitude}, {\ttfamily Longitude}, {\ttfamily Time}, {\ttfamily Vehicle\+Number}.    \\\cline{1-2}
+{\bfseries{Speed Violation}}   &Порушення швидкісного режиму — коли автобус перевищує допустиму швидкість.    \\\cline{1-2}
+{\bfseries{Speed\+Violation\+Checker}}   &Клас, який перевіряє, чи порушено швидкість на основі координат і часу.    \\\cline{1-2}
+{\bfseries{Speed\+Violation\+Checker\+Factory}}   &Фабрика, що створює об\textquotesingle{}єкти для перевірки порушень, реалізує патерн "{}\+Factory"{}.    \\\cline{1-2}
+{\bfseries{haversine\+\_\+distance}}   &Функція, що рахує відстань між GPS-\/точками по сферичній формулі Haversine.    \\\cline{1-2}
+{\bfseries{convert\+\_\+to\+\_\+dict}}   &Функція, що перетворює рядок у словник Python (JSON-\/об\textquotesingle{}єкт).    \\\cline{1-2}
+{\bfseries{CSVLoader}}   &Клас для читання CSV-\/файлів і перетворення їх у формат JSON (list of dicts).    \\\cline{1-2}
+{\bfseries{BUS\+\_\+\+OUT1\+\_\+\+FILE / BUS\+\_\+\+OUT2\+\_\+\+FILE}}   &Дані автобусів зібрані в різні години доби (ранкові/вечірні).    \\\cline{1-2}
+{\bfseries{EARLY\+\_\+\+HOURS / LATE\+\_\+\+HOURS}}   &Перелік годин для відбору руху в ранкові або вечірні години пік.    \\\cline{1-2}
+{\bfseries{get\+\_\+violation\+\_\+coordinates()}}   &Функція, що повертає координати, на яких було зафіксовано порушення швидкості.    \\\cline{1-2}
+{\bfseries{API ZTM (Warszawa)}}   &API, який надає інформацію про рух автобусів у Варшаві. URL\+: {\ttfamily \href{https://api.um.warszawa.pl/api/action/dbtimetable_get/}{\texttt{ https\+://api.\+um.\+warszawa.\+pl/api/action/dbtimetable\+\_\+get/}}}.    \\\cline{1-2}
+{\bfseries{conect\+\_\+to\+\_\+api()}}   &Функція для з’єднання з API ZTM з параметрами запиту.    \\\cline{1-2}
+{\bfseries{CSV}}   &Формат зберігання даних, розділених комами (або іншим роздільником). У цьому проєкті — основне джерело вхідних даних.    \\\cline{1-2}
+{\bfseries{Grouped Bus Data}}   &Дані, згруповані за номером автобуса, щоб аналізувати кожен маршрут окремо.    \\\cline{1-2}
+{\bfseries{get\+\_\+bus\+\_\+data()}}   &Функція, яка читає CSV, відфільтровує записи за годинами, сортує та групує їх.    \\\cline{1-2}
+{\bfseries{Violation Report}}   &CSV-\/файл із результатами аналізу — координати порушень та дані про автобус.    \\\cline{1-2}
+{\bfseries{KM\+\_\+\+TO\+\_\+\+M\+\_\+\+CONVERSION}}   &Константа для переведення кілометрів у метри.    \\\cline{1-2}
+{\bfseries{EARTH\+\_\+\+RADIUS}}   &Радіус Землі, який використовується для розрахунку відстані (у км).    \\\cline{1-2}
+{\bfseries{CSV\+\_\+\+DELIMITER / CSV\+\_\+\+ENCODING}}   &Налаштування для зчитування CSV-\/файлів\+: роздільник та кодування.    \\\cline{1-2}
+{\bfseries{save\+\_\+results()}}   &Функція, яка зберігає фінальні дані у CSV-\/файл.    \\\cline{1-2}
+{\bfseries{Doxygen}}   &Інструмент, що використовується для автогенерації документації з Python-\/коду.    \\\cline{1-2}
+{\bfseries{Unit Tests}}   &Набір тестів, що перевіряють правильність логіки програми — наприклад, перевірку швидкості або обробку даних.    \\\cline{1-2}
+{\bfseries{BUS\+\_\+\+STATION\+\_\+\+API\+\_\+\+PARAMS}}   &Параметри запиту до API для отримання координат зупинок.    \\\cline{1-2}
+{\bfseries{load\+\_\+data()}}   &Завантажує CSV-\/файл і парсить стовпець {\ttfamily Time} у форматі {\ttfamily datetime}. Повертає {\ttfamily pandas.\+Data\+Frame}.    \\\cline{1-2}
+{\bfseries{load\+\_\+timetable\+\_\+data()}}   &Обгортка для завантаження розкладу на основі {\ttfamily zespol}, {\ttfamily slupek} і номера лінії.    \\\cline{1-2}
+{\bfseries{Time.\+sleep(60)}}   &Призупиняє виконання скрипта на 60 секунд між запитами — імітація щохвилинного моніторингу.    \\\cline{1-2}
+{\bfseries{API\+\_\+\+KEY}}   &Ключ доступу до API ZTM. Має бути захищений і прихований в реальних проєктах.    \\\cline{1-2}
+{\bfseries{process\+\_\+data()}}   &Загальна утиліта для обробки API-\/відповіді та збереження її в CSV.    \\\cline{1-2}
+{\bfseries{bus\+\_\+station\+\_\+output.\+csv}}   &Файл, у який записуються координати всіх зупинок.    \\\cline{1-2}
+{\bfseries{output\+\_\+file\+\_\+path}}   &Шлях до CSV, який використовується для збереження даних залежно від часу доби.   \\\cline{1-2}
+\end{longtabu}

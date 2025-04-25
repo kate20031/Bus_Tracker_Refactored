@@ -1,0 +1,71 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics Namespace Reference}
+\hypertarget{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics}{}\label{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.bus\_analytics@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.bus\_analytics}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_ad8d3f7615811f6f0fabd67ec6573c8c6}{print\+\_\+vehicles\+\_\+over\+\_\+speed\+\_\+limit}} ()
+\begin{DoxyCompactList}\small\item\em Prints the count of vehicles over the speed limit for two time periods. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_a2488ed5168bb24d2a9e2ea6cf97fccc8}{print\+\_\+violations\+\_\+in\+\_\+vicinity}} ()
+\begin{DoxyCompactList}\small\item\em Prints the number of clustered speed violations based on proximity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_a1d8834feb14c6bc1a4ba4e469d8dcc27}{print\+\_\+punctuality\+\_\+accuracy}} ()
+\begin{DoxyCompactList}\small\item\em Prints the number of non-\/punctual buses based on preprocessed punctuality data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_a29500e70bdfac2f8cbcc980a10208d1a}\label{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_a29500e70bdfac2f8cbcc980a10208d1a} 
+{\bfseries bus\+\_\+json1} = get\+\_\+bus\+\_\+data(BUS\+\_\+\+OUT1\+\_\+\+FILE)
+\item 
+\Hypertarget{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_ad56a0b769cc43139b7833c928d9ea69f}\label{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_ad56a0b769cc43139b7833c928d9ea69f} 
+{\bfseries bus\+\_\+json2} = get\+\_\+bus\+\_\+data(BUS\+\_\+\+OUT2\+\_\+\+FILE)
+\item 
+\Hypertarget{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_ab363f6307c0130d1e292fd551c81c666}\label{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_ab363f6307c0130d1e292fd551c81c666} 
+{\bfseries stops\+\_\+json} = get\+\_\+data(STOPS\+\_\+\+COORD\+\_\+\+FILE)
+\item 
+\Hypertarget{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_a141088bcb74a3b19a96a51f237f52280}\label{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_a141088bcb74a3b19a96a51f237f52280} 
+{\bfseries bus\+\_\+count\+\_\+data1} = len(bus\+\_\+json1.\+items())
+\item 
+\Hypertarget{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_ae85daf34df56ecb5149ec84173158026}\label{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_ae85daf34df56ecb5149ec84173158026} 
+{\bfseries bus\+\_\+count\+\_\+data2} = len(bus\+\_\+json2.\+items())
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package BusDataAnalysis
+This module performs bus data analysis
+by calculating the count of vehicles
+over the speed limit and the count of violations in vicinity.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_a1d8834feb14c6bc1a4ba4e469d8dcc27}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.bus\_analytics@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.bus\_analytics}!print\_punctuality\_accuracy@{print\_punctuality\_accuracy}}
+\index{print\_punctuality\_accuracy@{print\_punctuality\_accuracy}!Zaliczeniowy\_autobusy.BusTracker.data\_processing.bus\_analytics@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.bus\_analytics}}
+\doxysubsubsection{\texorpdfstring{print\_punctuality\_accuracy()}{print\_punctuality\_accuracy()}}
+{\footnotesize\ttfamily \label{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_a1d8834feb14c6bc1a4ba4e469d8dcc27} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics.\+print\+\_\+punctuality\+\_\+accuracy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prints the number of non-\/punctual buses based on preprocessed punctuality data. 
+
+This function reads precomputed punctuality data and outputs the number of buses that did not meet the punctuality requirements for both rush and non-\/rush hours. \Hypertarget{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_ad8d3f7615811f6f0fabd67ec6573c8c6}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.bus\_analytics@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.bus\_analytics}!print\_vehicles\_over\_speed\_limit@{print\_vehicles\_over\_speed\_limit}}
+\index{print\_vehicles\_over\_speed\_limit@{print\_vehicles\_over\_speed\_limit}!Zaliczeniowy\_autobusy.BusTracker.data\_processing.bus\_analytics@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.bus\_analytics}}
+\doxysubsubsection{\texorpdfstring{print\_vehicles\_over\_speed\_limit()}{print\_vehicles\_over\_speed\_limit()}}
+{\footnotesize\ttfamily \label{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_ad8d3f7615811f6f0fabd67ec6573c8c6} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics.\+print\+\_\+vehicles\+\_\+over\+\_\+speed\+\_\+limit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prints the count of vehicles over the speed limit for two time periods. 
+
+Uses the Haversine distance strategy and predefined speed limit to calculate how many vehicles exceeded the allowed speed during rush and non-\/rush hours. \Hypertarget{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_a2488ed5168bb24d2a9e2ea6cf97fccc8}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.bus\_analytics@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.bus\_analytics}!print\_violations\_in\_vicinity@{print\_violations\_in\_vicinity}}
+\index{print\_violations\_in\_vicinity@{print\_violations\_in\_vicinity}!Zaliczeniowy\_autobusy.BusTracker.data\_processing.bus\_analytics@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.bus\_analytics}}
+\doxysubsubsection{\texorpdfstring{print\_violations\_in\_vicinity()}{print\_violations\_in\_vicinity()}}
+{\footnotesize\ttfamily \label{namespace_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1bus__analytics_a2488ed5168bb24d2a9e2ea6cf97fccc8} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics.\+print\+\_\+violations\+\_\+in\+\_\+vicinity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prints the number of clustered speed violations based on proximity. 
+
+Counts and prints the number of violation clusters (places where many violations happen nearby) separately for rush and non-\/rush hours, using a defined distance threshold. 

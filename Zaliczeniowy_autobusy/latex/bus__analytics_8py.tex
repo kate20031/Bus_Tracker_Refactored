@@ -1,0 +1,80 @@
+\doxysection{Bus\+Tracker/data\+\_\+processing/bus\+\_\+analytics.py File Reference}
+\hypertarget{bus__analytics_8py}{}\label{bus__analytics_8py}\index{BusTracker/data\_processing/bus\_analytics.py@{BusTracker/data\_processing/bus\_analytics.py}}
+
+
+Module for analyzing bus movement data and identifying violations.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bus__analytics_8py_ad8d3f7615811f6f0fabd67ec6573c8c6}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics.\+print\+\_\+vehicles\+\_\+over\+\_\+speed\+\_\+limit}} ()
+\begin{DoxyCompactList}\small\item\em Prints the count of vehicles over the speed limit for two time periods. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{bus__analytics_8py_a2488ed5168bb24d2a9e2ea6cf97fccc8}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics.\+print\+\_\+violations\+\_\+in\+\_\+vicinity}} ()
+\begin{DoxyCompactList}\small\item\em Prints the number of clustered speed violations based on proximity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{bus__analytics_8py_a1d8834feb14c6bc1a4ba4e469d8dcc27}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics.\+print\+\_\+punctuality\+\_\+accuracy}} ()
+\begin{DoxyCompactList}\small\item\em Prints the number of non-\/punctual buses based on preprocessed punctuality data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{bus__analytics_8py_a29500e70bdfac2f8cbcc980a10208d1a}\label{bus__analytics_8py_a29500e70bdfac2f8cbcc980a10208d1a} 
+{\bfseries Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics.\+bus\+\_\+json1} = get\+\_\+bus\+\_\+data(BUS\+\_\+\+OUT1\+\_\+\+FILE)
+\item 
+\Hypertarget{bus__analytics_8py_ad56a0b769cc43139b7833c928d9ea69f}\label{bus__analytics_8py_ad56a0b769cc43139b7833c928d9ea69f} 
+{\bfseries Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics.\+bus\+\_\+json2} = get\+\_\+bus\+\_\+data(BUS\+\_\+\+OUT2\+\_\+\+FILE)
+\item 
+\Hypertarget{bus__analytics_8py_ab363f6307c0130d1e292fd551c81c666}\label{bus__analytics_8py_ab363f6307c0130d1e292fd551c81c666} 
+{\bfseries Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics.\+stops\+\_\+json} = get\+\_\+data(STOPS\+\_\+\+COORD\+\_\+\+FILE)
+\item 
+\Hypertarget{bus__analytics_8py_a141088bcb74a3b19a96a51f237f52280}\label{bus__analytics_8py_a141088bcb74a3b19a96a51f237f52280} 
+{\bfseries Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics.\+bus\+\_\+count\+\_\+data1} = len(bus\+\_\+json1.\+items())
+\item 
+\Hypertarget{bus__analytics_8py_ae85daf34df56ecb5149ec84173158026}\label{bus__analytics_8py_ae85daf34df56ecb5149ec84173158026} 
+{\bfseries Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics.\+bus\+\_\+count\+\_\+data2} = len(bus\+\_\+json2.\+items())
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Module for analyzing bus movement data and identifying violations. 
+
+This module provides functions for analyzing public bus data\+:
+\begin{DoxyItemize}
+\item counting buses exceeding speed limits
+\item identifying violation hotspots (based on geographic proximity)
+\item reporting punctuality issues
+\end{DoxyItemize}
+
+Data is loaded from preprocessed files representing rush and non-\/rush hour timeframes. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bus__analytics_8py_a1d8834feb14c6bc1a4ba4e469d8dcc27}\index{bus\_analytics.py@{bus\_analytics.py}!print\_punctuality\_accuracy@{print\_punctuality\_accuracy}}
+\index{print\_punctuality\_accuracy@{print\_punctuality\_accuracy}!bus\_analytics.py@{bus\_analytics.py}}
+\doxysubsubsection{\texorpdfstring{print\_punctuality\_accuracy()}{print\_punctuality\_accuracy()}}
+{\footnotesize\ttfamily \label{bus__analytics_8py_a1d8834feb14c6bc1a4ba4e469d8dcc27} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics.\+print\+\_\+punctuality\+\_\+accuracy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prints the number of non-\/punctual buses based on preprocessed punctuality data. 
+
+This function reads precomputed punctuality data and outputs the number of buses that did not meet the punctuality requirements for both rush and non-\/rush hours. \Hypertarget{bus__analytics_8py_ad8d3f7615811f6f0fabd67ec6573c8c6}\index{bus\_analytics.py@{bus\_analytics.py}!print\_vehicles\_over\_speed\_limit@{print\_vehicles\_over\_speed\_limit}}
+\index{print\_vehicles\_over\_speed\_limit@{print\_vehicles\_over\_speed\_limit}!bus\_analytics.py@{bus\_analytics.py}}
+\doxysubsubsection{\texorpdfstring{print\_vehicles\_over\_speed\_limit()}{print\_vehicles\_over\_speed\_limit()}}
+{\footnotesize\ttfamily \label{bus__analytics_8py_ad8d3f7615811f6f0fabd67ec6573c8c6} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics.\+print\+\_\+vehicles\+\_\+over\+\_\+speed\+\_\+limit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prints the count of vehicles over the speed limit for two time periods. 
+
+Uses the Haversine distance strategy and predefined speed limit to calculate how many vehicles exceeded the allowed speed during rush and non-\/rush hours. \Hypertarget{bus__analytics_8py_a2488ed5168bb24d2a9e2ea6cf97fccc8}\index{bus\_analytics.py@{bus\_analytics.py}!print\_violations\_in\_vicinity@{print\_violations\_in\_vicinity}}
+\index{print\_violations\_in\_vicinity@{print\_violations\_in\_vicinity}!bus\_analytics.py@{bus\_analytics.py}}
+\doxysubsubsection{\texorpdfstring{print\_violations\_in\_vicinity()}{print\_violations\_in\_vicinity()}}
+{\footnotesize\ttfamily \label{bus__analytics_8py_a2488ed5168bb24d2a9e2ea6cf97fccc8} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+bus\+\_\+analytics.\+print\+\_\+violations\+\_\+in\+\_\+vicinity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prints the number of clustered speed violations based on proximity. 
+
+Counts and prints the number of violation clusters (places where many violations happen nearby) separately for rush and non-\/rush hours, using a defined distance threshold. 

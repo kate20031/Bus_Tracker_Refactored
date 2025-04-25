@@ -1,0 +1,147 @@
+\doxysection{Bus\+Tracker/utils/bus\+\_\+data\+\_\+utils.py File Reference}
+\hypertarget{bus__data__utils_8py}{}\label{bus__data__utils_8py}\index{BusTracker/utils/bus\_data\_utils.py@{BusTracker/utils/bus\_data\_utils.py}}
+
+
+This module contains functions for loading, processing, and saving bus data, including data from CSV files and API responses.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bus__data__utils_8py_ab639195cc43f2bbdb3ad9bec7da344ea}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+bus\+\_\+data\+\_\+utils.\+get\+\_\+violation\+\_\+coordinates}} (json\+\_\+data, max\+\_\+speed)
+\begin{DoxyCompactList}\small\item\em Returns list of coordinates of violations that exceed the max speed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{bus__data__utils_8py_a287b05d9a6c2d51ed2c5e155db27ecc6}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+bus\+\_\+data\+\_\+utils.\+get\+\_\+bus\+\_\+data}} (file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Parses and formats bus data from a CSV file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{bus__data__utils_8py_a9d322919747c2791ba64a33d875dcc20}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+bus\+\_\+data\+\_\+utils.\+get\+\_\+data}} (file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Reads a CSV file and converts it into a list of dictionaries. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{bus__data__utils_8py_a1c632924b6b287def2125474b59a408a}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+bus\+\_\+data\+\_\+utils.\+process\+\_\+data}} (response, output\+\_\+file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Processes the API response and appends the result to a CSV file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{bus__data__utils_8py_ac9ba5b44b021eae88f13a4867fda9359}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+bus\+\_\+data\+\_\+utils.\+save\+\_\+results}} (results\+\_\+df, output\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Saves the results Data\+Frame to a CSV file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module contains functions for loading, processing, and saving bus data, including data from CSV files and API responses. 
+
+It provides functionality to\+:
+\begin{DoxyItemize}
+\item Get violation coordinates based on bus data.
+\item Parse and format bus data from CSV files.
+\item Process API responses and save the results.
+\item Save results to a CSV file. 
+\end{DoxyItemize}
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bus__data__utils_8py_a287b05d9a6c2d51ed2c5e155db27ecc6}\index{bus\_data\_utils.py@{bus\_data\_utils.py}!get\_bus\_data@{get\_bus\_data}}
+\index{get\_bus\_data@{get\_bus\_data}!bus\_data\_utils.py@{bus\_data\_utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_bus\_data()}{get\_bus\_data()}}
+{\footnotesize\ttfamily \label{bus__data__utils_8py_a287b05d9a6c2d51ed2c5e155db27ecc6} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+bus\+\_\+data\+\_\+utils.\+get\+\_\+bus\+\_\+data (\begin{DoxyParamCaption}\item[{}]{file\+\_\+path}{}\end{DoxyParamCaption})}
+
+
+
+Parses and formats bus data from a CSV file. 
+
+This function reads the bus data from the specified CSV file, converts the time to a datetime object, and filters the data based on the bus operation time. It groups the data by Vehicle\+Number and returns the grouped data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+path} & The path to the CSV file containing bus data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dictionary where the keys are vehicle numbers and the values are lists of records for that vehicle.
+\end{DoxyReturn}
+\begin{DoxyVerb}Parse and format the data in the file.
+Returns the grouped json data.
+\end{DoxyVerb}
+ \Hypertarget{bus__data__utils_8py_a9d322919747c2791ba64a33d875dcc20}\index{bus\_data\_utils.py@{bus\_data\_utils.py}!get\_data@{get\_data}}
+\index{get\_data@{get\_data}!bus\_data\_utils.py@{bus\_data\_utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_data()}{get\_data()}}
+{\footnotesize\ttfamily \label{bus__data__utils_8py_a9d322919747c2791ba64a33d875dcc20} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+bus\+\_\+data\+\_\+utils.\+get\+\_\+data (\begin{DoxyParamCaption}\item[{}]{file\+\_\+path}{}\end{DoxyParamCaption})}
+
+
+
+Reads a CSV file and converts it into a list of dictionaries. 
+
+This function loads the data from a CSV file using the CSVLoader class, which converts each row of the file into a dictionary.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+path} & The path to the CSV file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of dictionaries where each dictionary represents a row from the CSV file.
+\end{DoxyReturn}
+\begin{DoxyVerb}Reads a CSV file and converts it into a list of dictionaries.
+\end{DoxyVerb}
+ \Hypertarget{bus__data__utils_8py_ab639195cc43f2bbdb3ad9bec7da344ea}\index{bus\_data\_utils.py@{bus\_data\_utils.py}!get\_violation\_coordinates@{get\_violation\_coordinates}}
+\index{get\_violation\_coordinates@{get\_violation\_coordinates}!bus\_data\_utils.py@{bus\_data\_utils.py}}
+\doxysubsubsection{\texorpdfstring{get\_violation\_coordinates()}{get\_violation\_coordinates()}}
+{\footnotesize\ttfamily \label{bus__data__utils_8py_ab639195cc43f2bbdb3ad9bec7da344ea} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+bus\+\_\+data\+\_\+utils.\+get\+\_\+violation\+\_\+coordinates (\begin{DoxyParamCaption}\item[{}]{json\+\_\+data}{, }\item[{}]{max\+\_\+speed}{}\end{DoxyParamCaption})}
+
+
+
+Returns list of coordinates of violations that exceed the max speed. 
+
+This function checks the vehicle data and returns the coordinates where the vehicles exceeded the specified max speed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+data} & The vehicle data in JSON format. \\
+\hline
+{\em max\+\_\+speed} & The maximum speed limit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of coordinates where the speed violations occurred.
+\end{DoxyReturn}
+\begin{DoxyVerb}Returns list of the coordinates of violations that exceed max speed.
+\end{DoxyVerb}
+ \Hypertarget{bus__data__utils_8py_a1c632924b6b287def2125474b59a408a}\index{bus\_data\_utils.py@{bus\_data\_utils.py}!process\_data@{process\_data}}
+\index{process\_data@{process\_data}!bus\_data\_utils.py@{bus\_data\_utils.py}}
+\doxysubsubsection{\texorpdfstring{process\_data()}{process\_data()}}
+{\footnotesize\ttfamily \label{bus__data__utils_8py_a1c632924b6b287def2125474b59a408a} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+bus\+\_\+data\+\_\+utils.\+process\+\_\+data (\begin{DoxyParamCaption}\item[{}]{response}{, }\item[{}]{output\+\_\+file\+\_\+path}{}\end{DoxyParamCaption})}
+
+
+
+Processes the API response and appends the result to a CSV file. 
+
+This function takes the API response, parses the JSON data, and writes the records to the specified output CSV file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & The API response containing the records. \\
+\hline
+{\em output\+\_\+file\+\_\+path} & The path to the output CSV file where the records will be saved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVerb}Processes the response and writes the records to the CSV file.
+\end{DoxyVerb}
+ \Hypertarget{bus__data__utils_8py_ac9ba5b44b021eae88f13a4867fda9359}\index{bus\_data\_utils.py@{bus\_data\_utils.py}!save\_results@{save\_results}}
+\index{save\_results@{save\_results}!bus\_data\_utils.py@{bus\_data\_utils.py}}
+\doxysubsubsection{\texorpdfstring{save\_results()}{save\_results()}}
+{\footnotesize\ttfamily \label{bus__data__utils_8py_ac9ba5b44b021eae88f13a4867fda9359} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+bus\+\_\+data\+\_\+utils.\+save\+\_\+results (\begin{DoxyParamCaption}\item[{}]{results\+\_\+df}{, }\item[{}]{output\+\_\+file}{}\end{DoxyParamCaption})}
+
+
+
+Saves the results Data\+Frame to a CSV file. 
+
+This function takes a Pandas Data\+Frame and saves it to the specified output CSV file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em results\+\_\+df} & The Pandas Data\+Frame containing the results to be saved. \\
+\hline
+{\em output\+\_\+file} & The path to the output CSV file where the results will be stored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVerb}This function saves the resulting DataFrame
+'results_df' into the 'output_file' CSV file.
+\end{DoxyVerb}
+ 

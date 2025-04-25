@@ -1,0 +1,136 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+speed\+\_\+violation\+\_\+checker.\+Speed\+Violation\+Checker Class Reference}
+\hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker}{}\label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker}}
+
+
+Class to detect vehicles exceeding the speed limit.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a6aa8064f3fec7c6ac2f2070972778af9}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, max\+\_\+speed, \mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__calculation__strategy_1_1_speed_calculation_strategy}{Speed\+Calculation\+Strategy}} strategy)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a2388a2d9628c1d0746c0424411fc10b4}{calculate\+\_\+max\+\_\+speed}} (self, vehicle)
+\begin{DoxyCompactList}\small\item\em Calculates the maximum speed of a given vehicle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a44a02cad0b28e34bd87fb031b6a69326}{count\+\_\+vehicles\+\_\+over\+\_\+speed\+\_\+limit}} (self, json\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Counts how many vehicles exceeded the speed limit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a321f0b2b62ced1ef97b5b0bbfb307fe9}{get\+\_\+violation\+\_\+coordinates}} (self, json\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Retrieves coordinates of speed violations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a748f7be0e81eadbc4032eb2815cc6e98}{calculate\+\_\+speed}} (self, vehicle, index)
+\begin{DoxyCompactList}\small\item\em Calculates speed between two positions using Haversine distance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_ac52ea553d2803daaaf791f86638d79eb}\label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_ac52ea553d2803daaaf791f86638d79eb} 
+{\bfseries max\+\_\+speed} = max\+\_\+speed
+\item 
+\Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a6f1b836dd026d4925713e61dc56bd426}\label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a6f1b836dd026d4925713e61dc56bd426} 
+{\bfseries strategy} = strategy
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to detect vehicles exceeding the speed limit. 
+
+Uses a given speed calculation strategy to determine whether vehicles are speeding. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a6aa8064f3fec7c6ac2f2070972778af9}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a6aa8064f3fec7c6ac2f2070972778af9} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+speed\+\_\+violation\+\_\+checker.\+Speed\+Violation\+Checker.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{max\+\_\+speed}{, }\item[{\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__calculation__strategy_1_1_speed_calculation_strategy}{Speed\+Calculation\+Strategy}}}]{strategy}{}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+speed} & The maximum allowed speed. \\
+\hline
+{\em strategy} & The strategy used to calculate speed. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a2388a2d9628c1d0746c0424411fc10b4}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker}!calculate\_max\_speed@{calculate\_max\_speed}}
+\index{calculate\_max\_speed@{calculate\_max\_speed}!Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker}}
+\doxysubsubsection{\texorpdfstring{calculate\_max\_speed()}{calculate\_max\_speed()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a2388a2d9628c1d0746c0424411fc10b4} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+speed\+\_\+violation\+\_\+checker.\+Speed\+Violation\+Checker.\+calculate\+\_\+max\+\_\+speed (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{vehicle}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the maximum speed of a given vehicle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle} & A list of location records (dicts) for one vehicle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The highest speed detected. 
+\end{DoxyReturn}
+\Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a748f7be0e81eadbc4032eb2815cc6e98}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker}!calculate\_speed@{calculate\_speed}}
+\index{calculate\_speed@{calculate\_speed}!Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker}}
+\doxysubsubsection{\texorpdfstring{calculate\_speed()}{calculate\_speed()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a748f7be0e81eadbc4032eb2815cc6e98} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+speed\+\_\+violation\+\_\+checker.\+Speed\+Violation\+Checker.\+calculate\+\_\+speed (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{vehicle}{, }\item[{}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Calculates speed between two positions using Haversine distance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle} & List of vehicle location entries (dicts). \\
+\hline
+{\em index} & Index of the second entry used for speed calculation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Speed in appropriate units; 0 if time difference is zero. 
+\end{DoxyReturn}
+\Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a44a02cad0b28e34bd87fb031b6a69326}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker}!count\_vehicles\_over\_speed\_limit@{count\_vehicles\_over\_speed\_limit}}
+\index{count\_vehicles\_over\_speed\_limit@{count\_vehicles\_over\_speed\_limit}!Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker}}
+\doxysubsubsection{\texorpdfstring{count\_vehicles\_over\_speed\_limit()}{count\_vehicles\_over\_speed\_limit()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a44a02cad0b28e34bd87fb031b6a69326} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+speed\+\_\+violation\+\_\+checker.\+Speed\+Violation\+Checker.\+count\+\_\+vehicles\+\_\+over\+\_\+speed\+\_\+limit (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{json\+\_\+data}{}\end{DoxyParamCaption})}
+
+
+
+Counts how many vehicles exceeded the speed limit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+data} & Dictionary of vehicle tracking data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer count of speeding vehicles. 
+\end{DoxyReturn}
+\Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a321f0b2b62ced1ef97b5b0bbfb307fe9}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker}!get\_violation\_coordinates@{get\_violation\_coordinates}}
+\index{get\_violation\_coordinates@{get\_violation\_coordinates}!Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_violation\_checker.SpeedViolationChecker}}
+\doxysubsubsection{\texorpdfstring{get\_violation\_coordinates()}{get\_violation\_coordinates()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__violation__checker_1_1_speed_violation_checker_a321f0b2b62ced1ef97b5b0bbfb307fe9} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+speed\+\_\+violation\+\_\+checker.\+Speed\+Violation\+Checker.\+get\+\_\+violation\+\_\+coordinates (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{json\+\_\+data}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves coordinates of speed violations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+data} & Dictionary of vehicle tracking data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of tuples (latitude, longitude, vehicle number) for each violation. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bus\+Tracker/data\+\_\+processing/\mbox{\hyperlink{speed__violation__checker_8py}{speed\+\_\+violation\+\_\+checker.\+py}}\end{DoxyCompactItemize}

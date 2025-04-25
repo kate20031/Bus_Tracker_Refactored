@@ -1,0 +1,76 @@
+\doxysection{Bus\+Tracker/main.py File Reference}
+\hypertarget{main_8py}{}\label{main_8py}\index{BusTracker/main.py@{BusTracker/main.py}}
+
+
+This module runs the bus analytics process, including loading data and performing the data analysis.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8py_adaa745849282b4cddd99f740a1e308f4}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+main.\+load\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Loads bus tracking data and bus stations coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{main_8py_a0b1f28a8a60561cbcc81ce8d3419a381}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+main.\+analyse\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Analyzes the loaded bus data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{main_8py_a0948c2f322df9820d02f2ed5b5ebbb5d}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+main.\+main}} ()
+\begin{DoxyCompactList}\small\item\em Main function to run the bus analytics process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module runs the bus analytics process, including loading data and performing the data analysis. 
+
+This module contains functions to load bus tracking data, bus station coordinates, and to perform the analytics including vehicle speed violations, violations in vicinity, and punctuality accuracy. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8py_a0b1f28a8a60561cbcc81ce8d3419a381}\index{main.py@{main.py}!analyse\_data@{analyse\_data}}
+\index{analyse\_data@{analyse\_data}!main.py@{main.py}}
+\doxysubsubsection{\texorpdfstring{analyse\_data()}{analyse\_data()}}
+{\footnotesize\ttfamily \label{main_8py_a0b1f28a8a60561cbcc81ce8d3419a381} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+main.\+analyse\+\_\+data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Analyzes the loaded bus data. 
+
+This function calls various analytics functions to assess\+:
+\begin{DoxyItemize}
+\item Vehicles that exceed the speed limit ({\ttfamily print\+\_\+vehicles\+\_\+over\+\_\+speed\+\_\+limit()}).
+\item Violations occurring in the vicinity of other violations ({\ttfamily print\+\_\+violations\+\_\+in\+\_\+vicinity()}).
+\item Punctuality of buses based on the loaded timetable and actual arrival times ({\ttfamily print\+\_\+punctuality\+\_\+accuracy()}).
+\end{DoxyItemize}
+
+\begin{DoxyVerb}Calls functions to print vehicles over
+ speed limit and violations in vicinity.
+\end{DoxyVerb}
+ \Hypertarget{main_8py_adaa745849282b4cddd99f740a1e308f4}\index{main.py@{main.py}!load\_data@{load\_data}}
+\index{load\_data@{load\_data}!main.py@{main.py}}
+\doxysubsubsection{\texorpdfstring{load\_data()}{load\_data()}}
+{\footnotesize\ttfamily \label{main_8py_adaa745849282b4cddd99f740a1e308f4} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+main.\+load\+\_\+data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loads bus tracking data and bus stations coordinates. 
+
+This function calls two separate functions to load bus tracking data and bus station coordinates. It calls {\ttfamily load\+\_\+bus\+\_\+tracking\+\_\+data()} to fetch real-\/time bus location data and {\ttfamily load\+\_\+bus\+\_\+stations\+\_\+coord()} to fetch coordinates of bus stations.
+
+\begin{DoxyVerb}Calls functions to load bus tracking data and bus stations coordinates.
+\end{DoxyVerb}
+ \Hypertarget{main_8py_a0948c2f322df9820d02f2ed5b5ebbb5d}\index{main.py@{main.py}!main@{main}}
+\index{main@{main}!main.py@{main.py}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8py_a0948c2f322df9820d02f2ed5b5ebbb5d} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+main.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Main function to run the bus analytics process. 
+
+This function is the entry point for the analytics process. It orchestrates the loading of data and triggers the data analysis.
+
+\begin{DoxyNote}{Note}
+The call to {\ttfamily load\+\_\+data()} is currently commented out. When active, it will load the required data before analysis.
+\end{DoxyNote}
+\begin{DoxyVerb}Main function.
+\end{DoxyVerb}
+ 

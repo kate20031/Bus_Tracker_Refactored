@@ -1,0 +1,44 @@
+\doxysection{Bus\+Tracker/data\+\_\+processing/violation\+\_\+clusterer.py File Reference}
+\hypertarget{violation__clusterer_8py}{}\label{violation__clusterer_8py}\index{BusTracker/data\_processing/violation\_clusterer.py@{BusTracker/data\_processing/violation\_clusterer.py}}
+
+
+Module for finding locations with multiple speed violations.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{violation__clusterer_8py_a3dad2c1a2a845fa2f6137857ea14fc79}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+violation\+\_\+clusterer.\+find\+\_\+violations\+\_\+places}} (coordinates, max\+\_\+dist, bus\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Finds clusters of violation locations based on a maximum distance threshold. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Module for finding locations with multiple speed violations. 
+
+This module contains a function to group violations based on geographical proximity and the number of occurrences. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{violation__clusterer_8py_a3dad2c1a2a845fa2f6137857ea14fc79}\index{violation\_clusterer.py@{violation\_clusterer.py}!find\_violations\_places@{find\_violations\_places}}
+\index{find\_violations\_places@{find\_violations\_places}!violation\_clusterer.py@{violation\_clusterer.py}}
+\doxysubsubsection{\texorpdfstring{find\_violations\_places()}{find\_violations\_places()}}
+{\footnotesize\ttfamily \label{violation__clusterer_8py_a3dad2c1a2a845fa2f6137857ea14fc79} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+violation\+\_\+clusterer.\+find\+\_\+violations\+\_\+places (\begin{DoxyParamCaption}\item[{}]{coordinates}{, }\item[{}]{max\+\_\+dist}{, }\item[{}]{bus\+\_\+count}{}\end{DoxyParamCaption})}
+
+
+
+Finds clusters of violation locations based on a maximum distance threshold. 
+
+Groups violation coordinates into clusters if they are within the maximum distance from each other. After clustering, it filters out groups with insufficient bus violations based on a predefined threshold.
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinates} & List of violation coordinates (lat, lon, vehicle number). \\
+\hline
+{\em max\+\_\+dist} & The maximum distance (in meters) between two violation points for them to be considered in the same cluster. \\
+\hline
+{\em bus\+\_\+count} & The total number of buses used to compute a threshold for cluster size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of clusters where each cluster contains violation points that are geographically close to each other. 
+\end{DoxyReturn}

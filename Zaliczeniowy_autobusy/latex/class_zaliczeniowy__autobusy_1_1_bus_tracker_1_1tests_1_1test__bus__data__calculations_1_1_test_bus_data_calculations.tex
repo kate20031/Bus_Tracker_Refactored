@@ -1,0 +1,176 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+bus\+\_\+data\+\_\+calculations.\+Test\+Bus\+Data\+Calculations Class Reference}
+\hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations}{}\label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations}\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}}
+
+
+Unit test case for bus data calculation functions.  
+
+
+Inheritance diagram for Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+bus\+\_\+data\+\_\+calculations.\+Test\+Bus\+Data\+Calculations\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_a96bdff078cf2a8c07a418ecde4031f50}{set\+Up}} (self)
+\begin{DoxyCompactList}\small\item\em Set up any necessary data or configuration for the tests. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ad46acdc16dd5ebe981a3f904d0b56948}{tear\+Down}} (self)
+\begin{DoxyCompactList}\small\item\em Clean up any resources or data created during the tests. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_acfe73423ebc1947b99985c31a4abae93}{test\+\_\+haversine\+\_\+distance}} (self)
+\begin{DoxyCompactList}\small\item\em Test the haversine\+\_\+distance function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ad6da3bf7256e0e3f27d89b38ca7705f4}{test\+\_\+process\+\_\+data\+\_\+invalid}} (self)
+\begin{DoxyCompactList}\small\item\em Test the process\+\_\+data function with invalid data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ac51f4c125b81fa835be556e12d6ac8f6}{test\+\_\+convert\+\_\+to\+\_\+dict}} (self)
+\begin{DoxyCompactList}\small\item\em Test the convert\+\_\+to\+\_\+dict function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_a8c16829c2bb6681609beb1a5070831cd}{test\+\_\+save\+\_\+results\+\_\+invalid\+\_\+file}} (self)
+\begin{DoxyCompactList}\small\item\em Test for saving results to an invalid file path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_a218709a2b5283637b5e831512319e7c0}{test\+\_\+save\+\_\+results\+\_\+valid\+\_\+file}} (self)
+\begin{DoxyCompactList}\small\item\em Test for saving results to a valid file path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ad4a3943dc6dc591b1bef9a631fdcb471}{test\+\_\+save\+\_\+results\+\_\+overwrite}} (self)
+\begin{DoxyCompactList}\small\item\em Test for overwriting existing result file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_a86f39c58ef8fdc00f60ed082d2eec23c}\label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_a86f39c58ef8fdc00f60ed082d2eec23c} 
+str {\bfseries test\+\_\+output\+\_\+file} = "{}test\+\_\+output.\+csv"{}
+\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ad0f2381ea5018f4a8237b82239d63aee}{test\+\_\+results\+\_\+df}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Unit test case for bus data calculation functions. 
+
+This test case includes various tests for functions used to calculate bus data such as speed, violation coordinates, and result saving.
+
+\begin{DoxyVerb}Test cases for functions in the bus_data_calculations module.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_a96bdff078cf2a8c07a418ecde4031f50}\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}!setUp@{setUp}}
+\index{setUp@{setUp}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_a96bdff078cf2a8c07a418ecde4031f50} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+bus\+\_\+data\+\_\+calculations.\+Test\+Bus\+Data\+Calculations.\+set\+Up (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Set up any necessary data or configuration for the tests. 
+
+This method is called before each test method is executed. It initializes necessary test data and configurations.
+
+\begin{DoxyVerb}Set up any necessary data or configuration for your tests.\end{DoxyVerb}
+ \Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ad46acdc16dd5ebe981a3f904d0b56948}\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}!tearDown@{tearDown}}
+\index{tearDown@{tearDown}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}}
+\doxysubsubsection{\texorpdfstring{tearDown()}{tearDown()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ad46acdc16dd5ebe981a3f904d0b56948} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+bus\+\_\+data\+\_\+calculations.\+Test\+Bus\+Data\+Calculations.\+tear\+Down (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Clean up any resources or data created during the tests. 
+
+This method is called after each test method is executed. It removes any files or resources created during tests.
+
+\begin{DoxyVerb}Clean up any resources or data created during the tests.\end{DoxyVerb}
+ \Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ac51f4c125b81fa835be556e12d6ac8f6}\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}!test\_convert\_to\_dict@{test\_convert\_to\_dict}}
+\index{test\_convert\_to\_dict@{test\_convert\_to\_dict}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}}
+\doxysubsubsection{\texorpdfstring{test\_convert\_to\_dict()}{test\_convert\_to\_dict()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ac51f4c125b81fa835be556e12d6ac8f6} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+bus\+\_\+data\+\_\+calculations.\+Test\+Bus\+Data\+Calculations.\+test\+\_\+convert\+\_\+to\+\_\+dict (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Test the convert\+\_\+to\+\_\+dict function. 
+
+This test ensures that the {\ttfamily convert\+\_\+to\+\_\+dict} function correctly converts a string representation of a dictionary to an actual dictionary.
+
+\begin{DoxyVerb}Test the convert_to_dict function.\end{DoxyVerb}
+ \Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_acfe73423ebc1947b99985c31a4abae93}\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}!test\_haversine\_distance@{test\_haversine\_distance}}
+\index{test\_haversine\_distance@{test\_haversine\_distance}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}}
+\doxysubsubsection{\texorpdfstring{test\_haversine\_distance()}{test\_haversine\_distance()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_acfe73423ebc1947b99985c31a4abae93} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+bus\+\_\+data\+\_\+calculations.\+Test\+Bus\+Data\+Calculations.\+test\+\_\+haversine\+\_\+distance (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Test the haversine\+\_\+distance function. 
+
+This test validates the correctness of the {\ttfamily haversine\+\_\+distance} function by calculating the distance between two geographical points (Warsaw and Rome) and comparing it with the expected result.
+
+\begin{DoxyVerb}Test the haversine_distance function.\end{DoxyVerb}
+ \Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ad6da3bf7256e0e3f27d89b38ca7705f4}\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}!test\_process\_data\_invalid@{test\_process\_data\_invalid}}
+\index{test\_process\_data\_invalid@{test\_process\_data\_invalid}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}}
+\doxysubsubsection{\texorpdfstring{test\_process\_data\_invalid()}{test\_process\_data\_invalid()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ad6da3bf7256e0e3f27d89b38ca7705f4} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+bus\+\_\+data\+\_\+calculations.\+Test\+Bus\+Data\+Calculations.\+test\+\_\+process\+\_\+data\+\_\+invalid (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Test the process\+\_\+data function with invalid data. 
+
+This test simulates the case where the {\ttfamily process\+\_\+data} function receives invalid data and ensures that no file is written when the response indicates an error.
+
+\begin{DoxyVerb}Test the process_data function with invalid data.\end{DoxyVerb}
+ \Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_a8c16829c2bb6681609beb1a5070831cd}\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}!test\_save\_results\_invalid\_file@{test\_save\_results\_invalid\_file}}
+\index{test\_save\_results\_invalid\_file@{test\_save\_results\_invalid\_file}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}}
+\doxysubsubsection{\texorpdfstring{test\_save\_results\_invalid\_file()}{test\_save\_results\_invalid\_file()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_a8c16829c2bb6681609beb1a5070831cd} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+bus\+\_\+data\+\_\+calculations.\+Test\+Bus\+Data\+Calculations.\+test\+\_\+save\+\_\+results\+\_\+invalid\+\_\+file (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Test for saving results to an invalid file path. 
+
+This test checks that the {\ttfamily save\+\_\+results} function raises an error when trying to save results to a file with an invalid file path.
+
+\begin{DoxyVerb}Test for saving results to an invalid file path.\end{DoxyVerb}
+ \Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ad4a3943dc6dc591b1bef9a631fdcb471}\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}!test\_save\_results\_overwrite@{test\_save\_results\_overwrite}}
+\index{test\_save\_results\_overwrite@{test\_save\_results\_overwrite}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}}
+\doxysubsubsection{\texorpdfstring{test\_save\_results\_overwrite()}{test\_save\_results\_overwrite()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ad4a3943dc6dc591b1bef9a631fdcb471} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+bus\+\_\+data\+\_\+calculations.\+Test\+Bus\+Data\+Calculations.\+test\+\_\+save\+\_\+results\+\_\+overwrite (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Test for overwriting existing result file. 
+
+This test checks that when {\ttfamily save\+\_\+results} is called with an existing file, the file is overwritten with the new data.
+
+\begin{DoxyVerb}Test for overwriting existing result file.\end{DoxyVerb}
+ \Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_a218709a2b5283637b5e831512319e7c0}\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}!test\_save\_results\_valid\_file@{test\_save\_results\_valid\_file}}
+\index{test\_save\_results\_valid\_file@{test\_save\_results\_valid\_file}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}}
+\doxysubsubsection{\texorpdfstring{test\_save\_results\_valid\_file()}{test\_save\_results\_valid\_file()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_a218709a2b5283637b5e831512319e7c0} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+bus\+\_\+data\+\_\+calculations.\+Test\+Bus\+Data\+Calculations.\+test\+\_\+save\+\_\+results\+\_\+valid\+\_\+file (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Test for saving results to a valid file path. 
+
+This test verifies that the {\ttfamily save\+\_\+results} function correctly saves the data frame to a valid file path and the file is created with the expected content.
+
+\begin{DoxyVerb}Test for saving results to a valid file path.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ad0f2381ea5018f4a8237b82239d63aee}\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}!test\_results\_df@{test\_results\_df}}
+\index{test\_results\_df@{test\_results\_df}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_bus\_data\_calculations.TestBusDataCalculations}}
+\doxysubsubsection{\texorpdfstring{test\_results\_df}{test\_results\_df}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__bus__data__calculations_1_1_test_bus_data_calculations_ad0f2381ea5018f4a8237b82239d63aee} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+bus\+\_\+data\+\_\+calculations.\+Test\+Bus\+Data\+Calculations.\+test\+\_\+results\+\_\+df}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ pd.DataFrame(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Column1"{}}:\ [1,\ 2,\ 3],\ \textcolor{stringliteral}{"{}Column2"{}}:\ [\textcolor{stringliteral}{"{}A"{}},\ \textcolor{stringliteral}{"{}B"{}},\ \textcolor{stringliteral}{"{}C"{}}]\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bus\+Tracker/tests/\mbox{\hyperlink{test__bus__data__calculations_8py}{test\+\_\+bus\+\_\+data\+\_\+calculations.\+py}}\end{DoxyCompactItemize}

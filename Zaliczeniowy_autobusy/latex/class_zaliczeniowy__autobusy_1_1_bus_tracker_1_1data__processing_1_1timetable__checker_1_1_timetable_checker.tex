@@ -1,0 +1,71 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+timetable\+\_\+checker.\+Timetable\+Checker Class Reference}
+\hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1timetable__checker_1_1_timetable_checker}{}\label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1timetable__checker_1_1_timetable_checker}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.timetable\_checker.TimetableChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.timetable\_checker.TimetableChecker}}
+
+
+Class to filter and calculate time differences between timetable entries and real-\/time data.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1timetable__checker_1_1_timetable_checker_ae6a759d55d907105c15b2d38daaa7cdf}{filter\+\_\+timetable\+\_\+times}} (timetable\+\_\+data, real\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Filters timetable entries based on real time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1timetable__checker_1_1_timetable_checker_a930ef57d9ba081af223a3186f6940c4b}{calculate\+\_\+time\+\_\+diff}} (timetable\+\_\+time, real\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Calculates the absolute time difference between a timetable entry and real-\/time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to filter and calculate time differences between timetable entries and real-\/time data. 
+
+Provides methods to filter timetable times that are within an acceptable range from the real-\/time entry and to calculate the absolute time difference between timetable and real-\/time entries. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1timetable__checker_1_1_timetable_checker_a930ef57d9ba081af223a3186f6940c4b}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.timetable\_checker.TimetableChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.timetable\_checker.TimetableChecker}!calculate\_time\_diff@{calculate\_time\_diff}}
+\index{calculate\_time\_diff@{calculate\_time\_diff}!Zaliczeniowy\_autobusy.BusTracker.data\_processing.timetable\_checker.TimetableChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.timetable\_checker.TimetableChecker}}
+\doxysubsubsection{\texorpdfstring{calculate\_time\_diff()}{calculate\_time\_diff()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1timetable__checker_1_1_timetable_checker_a930ef57d9ba081af223a3186f6940c4b} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+timetable\+\_\+checker.\+Timetable\+Checker.\+calculate\+\_\+time\+\_\+diff (\begin{DoxyParamCaption}\item[{}]{timetable\+\_\+time}{, }\item[{}]{real\+\_\+time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates the absolute time difference between a timetable entry and real-\/time. 
+
+Computes the absolute difference in seconds between a given timetable time and real time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em timetable\+\_\+time} & The scheduled time from the timetable. \\
+\hline
+{\em real\+\_\+time} & The real-\/time entry to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The absolute difference in seconds between the two times. 
+\end{DoxyReturn}
+\Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1timetable__checker_1_1_timetable_checker_ae6a759d55d907105c15b2d38daaa7cdf}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.timetable\_checker.TimetableChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.timetable\_checker.TimetableChecker}!filter\_timetable\_times@{filter\_timetable\_times}}
+\index{filter\_timetable\_times@{filter\_timetable\_times}!Zaliczeniowy\_autobusy.BusTracker.data\_processing.timetable\_checker.TimetableChecker@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.timetable\_checker.TimetableChecker}}
+\doxysubsubsection{\texorpdfstring{filter\_timetable\_times()}{filter\_timetable\_times()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1timetable__checker_1_1_timetable_checker_ae6a759d55d907105c15b2d38daaa7cdf} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+timetable\+\_\+checker.\+Timetable\+Checker.\+filter\+\_\+timetable\+\_\+times (\begin{DoxyParamCaption}\item[{}]{timetable\+\_\+data}{, }\item[{}]{real\+\_\+time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Filters timetable entries based on real time. 
+
+Filters timetable times that are within 1 hour difference from the real time. If the timetable time is close to real time (within 1 hour), it will be returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em timetable\+\_\+data} & List of timetable entries (dicts) containing scheduled times. \\
+\hline
+{\em real\+\_\+time} & The real-\/time entry to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of filtered timetable times that are close to the real time. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bus\+Tracker/data\+\_\+processing/\mbox{\hyperlink{timetable__checker_8py}{timetable\+\_\+checker.\+py}}\end{DoxyCompactItemize}

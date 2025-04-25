@@ -1,0 +1,55 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+speed\+\_\+calculation\+\_\+strategy.\+Speed\+Calculation\+Strategy Class Reference}
+\hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__calculation__strategy_1_1_speed_calculation_strategy}{}\label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__calculation__strategy_1_1_speed_calculation_strategy}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_calculation\_strategy.SpeedCalculationStrategy@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_calculation\_strategy.SpeedCalculationStrategy}}
+
+
+Abstract base class for speed calculation strategies.  
+
+
+Inheritance diagram for Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+speed\+\_\+calculation\+\_\+strategy.\+Speed\+Calculation\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.452555cm]{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__calculation__strategy_1_1_speed_calculation_strategy}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__calculation__strategy_1_1_speed_calculation_strategy_a0994124d038839af7be0c2167a9c1d0a}{calculate\+\_\+speed}} (self, vehicle, index)
+\begin{DoxyCompactList}\small\item\em Calculates speed for a vehicle at a specific index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for speed calculation strategies. 
+
+Any custom strategy must implement the {\ttfamily calculate\+\_\+speed} method. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__calculation__strategy_1_1_speed_calculation_strategy_a0994124d038839af7be0c2167a9c1d0a}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_calculation\_strategy.SpeedCalculationStrategy@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_calculation\_strategy.SpeedCalculationStrategy}!calculate\_speed@{calculate\_speed}}
+\index{calculate\_speed@{calculate\_speed}!Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_calculation\_strategy.SpeedCalculationStrategy@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_calculation\_strategy.SpeedCalculationStrategy}}
+\doxysubsubsection{\texorpdfstring{calculate\_speed()}{calculate\_speed()}}
+{\footnotesize\ttfamily \label{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__calculation__strategy_1_1_speed_calculation_strategy_a0994124d038839af7be0c2167a9c1d0a} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+speed\+\_\+calculation\+\_\+strategy.\+Speed\+Calculation\+Strategy.\+calculate\+\_\+speed (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{vehicle}{, }\item[{}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Calculates speed for a vehicle at a specific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle} & A list of location records (dicts) for a single vehicle. \\
+\hline
+{\em index} & Index of the current record in the list. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Speed at the given index. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__calculation__strategyd1e0db075462cb52c7c32fddc0b3ff32_a0c486aad9f06575ea90eccefa76755c6}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+speed\+\_\+calculation\+\_\+strategy.\+Haversine\+Speed\+Calculation\+Strategy}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bus\+Tracker/data\+\_\+processing/\mbox{\hyperlink{speed__calculation__strategy_8py}{speed\+\_\+calculation\+\_\+strategy.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,151 @@
+\chapter{Опис рефакториизації}
+\hypertarget{index}{}\label{index}\index{Опис рефакториизації@{Опис рефакториизації}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+
+
+Цей розділ описує зміни, внесені до проекту на основі принципів об\textquotesingle{}єктно-\/орієнтованого програмування (ООП) та архітектурних патернів, що покращили структуру коду та покращили тестованість.\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{1. Інкапсуляція}{1. Інкапсуляція}}\label{index_autotoc_md2}
+{\bfseries{Покращено\+:}}
+
+Введення методів в окремі модулі дозволяє приховати деталі реалізації. Наприклад, обчислення відстані тепер здійснюється через методи в модулі {\ttfamily geo\+\_\+utils} (зокрема, функція {\ttfamily haversine\+\_\+distance}), що забезпечує кращу організацію та інкапсуляцію логіки обчислення географічних відстаней.\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{2. Патерн "{}Стратегія"{}}{2. Патерн "{}Стратегія"{}}}\label{index_autotoc_md3}
+{\bfseries{Покращено\+:}}
+
+Для обчислення швидкості використано патерн "{}Стратегія"{}. Зокрема, для вибору стратегії обчислення швидкості використовується клас {\ttfamily Speed\+Calculation\+Factory}, який дозволяє змінювати алгоритм обчислення без змін в основному коді програми. Це дозволяє додавати нові стратегії для обчислення швидкості, як наприклад {\ttfamily Haversine\+Speed\+Calculation\+Strategy}, без необхідності модифікації інших компонентів програми.\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{3. Розподіл функціональності}{3. Розподіл функціональності}}\label{index_autotoc_md4}
+{\bfseries{Покращено\+:}}
+
+Код був розбитий на більш спеціалізовані функції в різних утилітних модулях\+: методи для обчислень відстаней тепер знаходяться в {\ttfamily geo\+\_\+utils}, а методи для взаємодії з API — в {\ttfamily api\+\_\+utils}. Це дозволяє зосередити кожен модуль на окремому завданні, знижуючи складність і покращуючи масштабованість проекту.\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{4. Простота (KISS -\/ Keep It Simple, Stupid)}{4. Простота (KISS -\/ Keep It Simple, Stupid)}}\label{index_autotoc_md5}
+{\bfseries{Покращено\+:}}
+
+Логіка була спрощена завдяки виділенню окремих методів для специфічних завдань. Кожен метод тепер відповідає за одну функціональність, що робить код більш зрозумілим та простим для розуміння. Наприклад, функція {\ttfamily find\+\_\+violations\+\_\+places} відповідає лише за кластеризацію порушень швидкості, що полегшує підтримку та тестування.\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{5. Можливість розвитку (Open/\+Closed Principle)}{5. Можливість розвитку (Open/\+Closed Principle)}}\label{index_autotoc_md6}
+{\bfseries{Покращено\+:}}
+
+Всі методи для обчислення швидкості та відстаней в {\ttfamily geo\+\_\+utils} тепер підтримують додавання нових алгоритмів обчислення без зміни існуючого коду. Це дозволяє легко додавати нові стратегії, як, наприклад, інші алгоритми для обчислення відстані або нові стратегії для визначення швидкості, що значно підвищує можливість розвитку програми без порушення роботи існуючих компонентів.\hypertarget{index_autotoc_md7}{}\doxysection{\texorpdfstring{6. Абстракція}{6. Абстракція}}\label{index_autotoc_md7}
+{\bfseries{Покращено\+:}}
+
+Використання абстракцій для роботи з API в {\ttfamily api\+\_\+utils} дозволяє приховати всі деталі реалізації HTTP-\/запитів та обробки відповідей. Це дає змогу змінювати API або тип запитів без змін у всьому коді. Наприклад, методи для взаємодії з API тепер зосереджені в одному модулі, що полегшує їх тестування та підтримку.\hypertarget{index_autotoc_md8}{}\doxysection{\texorpdfstring{7. DRY (Don\textquotesingle{}t Repeat Yourself)}{7. DRY (Don\textquotesingle{}t Repeat Yourself)}}\label{index_autotoc_md8}
+{\bfseries{Покращено\+:}}
+
+Зменшено дублювання коду завдяки виділенню логіки в окремі функції та модулі. Логіка взаємодії з API та збереження результатів тепер обробляється окремими методами в {\ttfamily api\+\_\+utils} та іншими утилітами, що робить код більш гнучким і зручним для масштабування.\hypertarget{index_autotoc_md9}{}\doxysection{\texorpdfstring{8. SOLID (особливо принципи "{}\+Single Responsibility"{} і "{}\+Dependency Inversion"{})}{8. SOLID (особливо принципи "{}\+Single Responsibility"{} і "{}\+Dependency Inversion"{})}}\label{index_autotoc_md9}
+{\bfseries{Покращено\+:}}
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Single Responsibility\+:}} Кожен метод тепер має одну відповідальність. Наприклад, функції для обчислення відстаней знаходяться в модулі {\ttfamily geo\+\_\+utils}, а логіка взаємодії з API — в {\ttfamily api\+\_\+utils}. Це полегшує підтримку і тестування.
+\item {\bfseries{Dependency Inversion\+:}} Використання патерну стратегій дозволяє програми залежати від абстракцій, а не від конкретних реалізацій. Наприклад, клас {\ttfamily Speed\+Violation\+Checker\+Factory} залежить від абстракції стратегії для обчислення швидкості, що дозволяє легко замінювати стратегії без зміни бізнес-\/логіки програми.
+\end{DoxyItemize}\hypertarget{index_autotoc_md10}{}\doxysection{\texorpdfstring{9. Підвищення тестованості}{9. Підвищення тестованості}}\label{index_autotoc_md10}
+{\bfseries{Покращено\+:}}
+
+Розбиття коду на окремі методи та модулі значно полегшує написання юніт-\/тестів. Тестувати окремі частини програми стало набагато простіше, оскільки можна протестувати логіку обчислень, взаємодії з API та визначення порушень швидкості окремо.\hypertarget{index_autotoc_md11}{}\doxysection{\texorpdfstring{10. Зменшення зв\textquotesingle{}язності та покращення когезії}{10. Зменшення зв\textquotesingle{}язності та покращення когезії}}\label{index_autotoc_md11}
+{\bfseries{Покращено\+:}}
+
+Тепер компоненти взаємодіють один з одним через чітко визначені інтерфейси, знижуючи зв\textquotesingle{}язність між частинами програми. Кожен модуль виконує свою чітко визначену задачу\+: модулі для обчислення швидкості, для взаємодії з API, для аналізу порушень і т.\+д., що зберігає високий рівень когезії та дозволяє швидко міняти окремі компоненти без впливу на інші частини програми.\hypertarget{index_autotoc_md12}{}\doxysection{\texorpdfstring{11. Принцип найменшого здивування (Law of Demeter)}{11. Принцип найменшого здивування (Law of Demeter)}}\label{index_autotoc_md12}
+{\bfseries{Покращено\+:}}
+
+Принцип "{}не звертатися до методів об\textquotesingle{}єктів, які не є частинами безпосереднього оточення"{} був дотриманий завдяки розбиттю функціональності на окремі методи та використанню чітко визначених інтерфейсів. Наприклад, функція {\ttfamily find\+\_\+violations\+\_\+places} працює з координатами, не залучаючи надмірну кількість залежностей.\hypertarget{index_autotoc_md13}{}\doxysection{\texorpdfstring{12. YAGNI (You Aren\textquotesingle{}t Gonna Need It)}{12. YAGNI (You Aren\textquotesingle{}t Gonna Need It)}}\label{index_autotoc_md13}
+{\bfseries{Покращено\+:}}
+
+Замість додавання зайвих складних абстракцій, кожна зміна була спрямована на оптимізацію коду та полегшення тестування, без додавання непотрібних функцій або абстракцій. Програма залишається гнучкою та не перевантаженою зайвими компонентами.
+
+\DoxyHorRuler{0}
+ \DoxyHorRuler{0}
+\hypertarget{index_autotoc_md14}{}\doxysection{\texorpdfstring{Опис Моделі Архітектури}{Опис Моделі Архітектури}}\label{index_autotoc_md14}
+Для покращення організації коду та підвищення його масштабованості, тестованості й підтримуваності були внесені кілька важливих змін в архітектуру проєкту на основі принципів об\textquotesingle{}єктно-\/орієнтованого програмування (ООП) і архітектурних патернів.\hypertarget{index_autotoc_md15}{}\doxysubsection{\texorpdfstring{1. Моделі та їх опис}{1. Моделі та їх опис}}\label{index_autotoc_md15}
+\hypertarget{index_autotoc_md16}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Bus\+Data\+Handler}} (Обробка даних автобусів)}{{\bfseries{Bus\+Data\+Handler}} (Обробка даних автобусів)}}\label{index_autotoc_md16}
+{\bfseries{Зміни\+:}} Створено єдиний клас для обробки даних автобусів. Цей клас відповідає за завантаження даних автобусів з файлів, попередню їх обробку та збереження результатів.
+
+{\bfseries{Обов\textquotesingle{}язки\+:}}
+\begin{DoxyItemize}
+\item Завантаження даних автобусів із файлів.
+\item Збереження результатів обробки даних.
+\item Перевірка коректності даних.
+\item Використовує методи з {\ttfamily api\+\_\+utils} для з\textquotesingle{}єднання з API.
+\end{DoxyItemize}\hypertarget{index_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Speed\+Violation\+Checker}} (Перевірка порушень швидкості)}{{\bfseries{Speed\+Violation\+Checker}} (Перевірка порушень швидкості)}}\label{index_autotoc_md17}
+{\bfseries{Зміни\+:}} Клас перевірки порушень швидкості став більш гнучким завдяки впровадженню патерну "{}Стратегія"{}. Тепер для перевірки швидкості використовуються різні стратегії (наприклад, Haversine\+Speed\+Calculation\+Strategy).
+
+{\bfseries{Обов\textquotesingle{}язки\+:}}
+\begin{DoxyItemize}
+\item Використовує стратегію для обчислення швидкості.
+\item Порівнює обчислену швидкість з максимально дозволеною.
+\item Генерує список порушень швидкості.
+\item Зберігає координати порушень.
+\end{DoxyItemize}\hypertarget{index_autotoc_md18}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Speed\+Violation\+Checker\+Factory}} (Фабрика порушень швидкості)}{{\bfseries{Speed\+Violation\+Checker\+Factory}} (Фабрика порушень швидкості)}}\label{index_autotoc_md18}
+{\bfseries{Зміни\+:}} Використання патерну "{}Фабрика"{} для створення об\textquotesingle{}єктів {\ttfamily Speed\+Violation\+Checker}, що дозволяє на основі певних параметрів вибирати стратегії обчислення швидкості.
+
+{\bfseries{Обов\textquotesingle{}язки\+:}}
+\begin{DoxyItemize}
+\item Створює екземпляри {\ttfamily Speed\+Violation\+Checker} за допомогою фабричного методу, передаючи стратегії для обчислення швидкості.
+\end{DoxyItemize}\hypertarget{index_autotoc_md19}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Speed\+Calculation\+Factory}} (Фабрика обчислення швидкості)}{{\bfseries{Speed\+Calculation\+Factory}} (Фабрика обчислення швидкості)}}\label{index_autotoc_md19}
+{\bfseries{Зміни\+:}} Впроваджено патерн "{}Фабрика"{}, який дозволяє створювати різні стратегії обчислення швидкості без зміни основного коду програми.
+
+{\bfseries{Обов\textquotesingle{}язки\+:}}
+\begin{DoxyItemize}
+\item Створює об\textquotesingle{}єкти для обчислення швидкості, які реалізують різні алгоритми (наприклад, Haversine\+Speed\+Calculation\+Strategy).
+\item Це дозволяє обирати алгоритм обчислення швидкості залежно від контексту (наприклад, для різних форматів даних).
+\end{DoxyItemize}\hypertarget{index_autotoc_md20}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Punctuality\+Analyzer}} (Аналіз пунктуальності)}{{\bfseries{Punctuality\+Analyzer}} (Аналіз пунктуальності)}}\label{index_autotoc_md20}
+{\bfseries{Зміни\+:}} Окремий клас для аналізу пунктуальності автобусів. Використовує завантажені дані і перевіряє відповідність розкладу.
+
+{\bfseries{Обов\textquotesingle{}язки\+:}}
+\begin{DoxyItemize}
+\item Аналізує дані про пунктуальність автобусів.
+\item Визначає, які автобуси не відповідають вимогам розкладу.
+\end{DoxyItemize}\hypertarget{index_autotoc_md21}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Violation\+Clusterer}} (Кластеризація порушень швидкості)}{{\bfseries{Violation\+Clusterer}} (Кластеризація порушень швидкості)}}\label{index_autotoc_md21}
+{\bfseries{Зміни\+:}} Окремий клас для кластеризації порушень швидкості на основі географічної близькості (з використанням {\ttfamily find\+\_\+violations\+\_\+places}).
+
+{\bfseries{Обов\textquotesingle{}язки\+:}}
+\begin{DoxyItemize}
+\item Кластеризує місця порушень швидкості за певним порогом відстані.
+\item Допомагає виявляти місця, де порушення відбуваються часто, що може вказувати на проблеми з інфраструктурою.
+\end{DoxyItemize}\hypertarget{index_autotoc_md22}{}\doxysubsubsection{\texorpdfstring{{\bfseries{APIUtils}} (Утиліти для роботи з API)}{{\bfseries{APIUtils}} (Утиліти для роботи з API)}}\label{index_autotoc_md22}
+{\bfseries{Зміни\+:}} Зроблено окремі утилітні функції для роботи з API. Це дозволяє спростити з\textquotesingle{}єднання з різними сервісами і зменшити залежність основних класів від деталей реалізації API.
+
+{\bfseries{Обов\textquotesingle{}язки\+:}}
+\begin{DoxyItemize}
+\item Взаємодіє з API для отримання необхідних даних (наприклад, зупинки автобусів, час прибуття, точність).
+\end{DoxyItemize}\hypertarget{index_autotoc_md23}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Geo\+Utils}} (Географічні утиліти)}{{\bfseries{Geo\+Utils}} (Географічні утиліти)}}\label{index_autotoc_md23}
+{\bfseries{Зміни\+:}} Створено окремий модуль для обчислення географічних відстаней. Це дозволяє централізувати географічні обчислення (наприклад, для перевірки швидкості або кластеризації порушень).
+
+{\bfseries{Обов\textquotesingle{}язки\+:}}
+\begin{DoxyItemize}
+\item Обчислення відстані між точками за допомогою формули Haversine.
+\end{DoxyItemize}\hypertarget{index_autotoc_md24}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Main}} (Основний модуль)}{{\bfseries{Main}} (Основний модуль)}}\label{index_autotoc_md24}
+{\bfseries{Зміни\+:}} Основний файл для запуску аналізу даних. Раніше в основному файлі знаходилась вся логіка, тепер це лише точка входу, що викликає відповідні методи для обробки даних.
+
+{\bfseries{Обов\textquotesingle{}язки\+:}}
+\begin{DoxyItemize}
+\item Завантаження даних.
+\item Виклик функцій для аналізу швидкості, порушень, пунктуальності.
+\item Виведення результатів аналізу.
+\end{DoxyItemize}\hypertarget{index_autotoc_md25}{}\doxysubsection{\texorpdfstring{2. Зміни, що були внесені в архітектуру\+:}{2. Зміни, що були внесені в архітектуру\+:}}\label{index_autotoc_md25}
+\hypertarget{index_autotoc_md26}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Патерн "{}Стратегія"{} (Strategy Pattern)\+:}}}{{\bfseries{Патерн "{}Стратегія"{} (Strategy Pattern)\+:}}}}\label{index_autotoc_md26}
+
+\begin{DoxyItemize}
+\item Використано для обчислення швидкості. Клас {\ttfamily Speed\+Calculation\+Strategy} є абстракцією для різних стратегій обчислення швидкості (наприклад, {\ttfamily Haversine\+Speed\+Calculation\+Strategy}). Це дозволяє змінювати стратегії без модифікації основного коду програми.
+\end{DoxyItemize}\hypertarget{index_autotoc_md27}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Патерн "{}Фабрика"{} (Factory Pattern)\+:}}}{{\bfseries{Патерн "{}Фабрика"{} (Factory Pattern)\+:}}}}\label{index_autotoc_md27}
+
+\begin{DoxyItemize}
+\item Для створення об\textquotesingle{}єктів {\ttfamily Speed\+Violation\+Checker} і стратегій швидкості використовується фабрика. Це забезпечує гнучкість у створенні об\textquotesingle{}єктів без необхідності змінювати код програми.
+\end{DoxyItemize}\hypertarget{index_autotoc_md28}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Розподіл відповідальностей (Single Responsibility Principle)\+:}}}{{\bfseries{Розподіл відповідальностей (Single Responsibility Principle)\+:}}}}\label{index_autotoc_md28}
+
+\begin{DoxyItemize}
+\item Кожен клас виконує тільки одну задачу\+: обчислення швидкості, перевірка порушень, аналіз пунктуальності, кластеризація порушень, робота з API тощо. Це полегшує підтримку та тестування.
+\end{DoxyItemize}\hypertarget{index_autotoc_md29}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Принцип відкритості/закритості (Open/\+Closed Principle)\+:}}}{{\bfseries{Принцип відкритості/закритості (Open/\+Closed Principle)\+:}}}}\label{index_autotoc_md29}
+
+\begin{DoxyItemize}
+\item Система тепер дозволяє додавати нові стратегії без змін в основному коді. Наприклад, можна додавати нові алгоритми для обчислення швидкості або нові типи порушень.
+\end{DoxyItemize}\hypertarget{index_autotoc_md30}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Інкапсуляція (Encapsulation)\+:}}}{{\bfseries{Інкапсуляція (Encapsulation)\+:}}}}\label{index_autotoc_md30}
+
+\begin{DoxyItemize}
+\item Деталі реалізації (наприклад, обчислення швидкості або кластеризація порушень) приховані в окремих класах. Взаємодія між компонентами здійснюється через чітко визначені інтерфейси.
+\end{DoxyItemize}\hypertarget{index_autotoc_md31}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Тестування\+:}}}{{\bfseries{Тестування\+:}}}}\label{index_autotoc_md31}
+
+\begin{DoxyItemize}
+\item Завдяки розподілу на менші функції та модулі, кожну частину програми тепер можна тестувати окремо. Це дозволяє ефективніше писати юніт-\/тести для кожної окремої частини.
+\end{DoxyItemize}\hypertarget{index_autotoc_md32}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Зниження зв\textquotesingle{}язності (Loose Coupling)\+:}}}{{\bfseries{Зниження зв\textquotesingle{}язності (Loose Coupling)\+:}}}}\label{index_autotoc_md32}
+
+\begin{DoxyItemize}
+\item Компоненти взаємодіють один з одним через чітко визначені інтерфейси (наприклад, {\ttfamily Speed\+Violation\+Checker} використовує стратегії обчислення швидкості через абстракції, а не через конкретні реалізації). Це забезпечує гнучкість у зміні реалізацій без впливу на інші частини програми.
+\end{DoxyItemize}\hypertarget{index_autotoc_md33}{}\doxysubsubsection{\texorpdfstring{{\bfseries{Масштабованість\+:}}}{{\bfseries{Масштабованість\+:}}}}\label{index_autotoc_md33}
+
+\begin{DoxyItemize}
+\item Структура коду дозволяє без проблем додавати нові стратегії, перевірки або функціональність (наприклад, нові алгоритми для обчислення швидкості або нові перевірки для пунктуальності), не змінюючи основний код програми. 
+\end{DoxyItemize}

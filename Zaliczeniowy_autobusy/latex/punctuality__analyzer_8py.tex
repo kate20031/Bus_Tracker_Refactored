@@ -1,0 +1,44 @@
+\doxysection{Bus\+Tracker/data\+\_\+processing/punctuality\+\_\+analyzer.py File Reference}
+\hypertarget{punctuality__analyzer_8py}{}\label{punctuality__analyzer_8py}\index{BusTracker/data\_processing/punctuality\_analyzer.py@{BusTracker/data\_processing/punctuality\_analyzer.py}}
+
+
+Module for analyzing punctuality of buses by comparing real-\/time data with the official timetable.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1punctuality__analyzer_1_1_punctuality_analyzer}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+punctuality\+\_\+analyzer.\+Punctuality\+Analyzer}}
+\begin{DoxyCompactList}\small\item\em Compares real-\/time bus data with timetable entries to assess punctuality. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{punctuality__analyzer_8py_ae3817f3195ddeff18d0feff2fdd579f5}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+punctuality\+\_\+analyzer.\+check\+\_\+punctuality\+\_\+accuracy}} (accuracy\+\_\+csv, punctual\+\_\+buses\+\_\+csv)
+\begin{DoxyCompactList}\small\item\em Entry-\/point function for checking punctuality accuracy and saving results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Module for analyzing punctuality of buses by comparing real-\/time data with the official timetable. 
+
+This module defines a class {\ttfamily Punctuality\+Analyzer} to evaluate how closely real bus arrivals match their scheduled times. It also provides a utility function to save the analysis results. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{punctuality__analyzer_8py_ae3817f3195ddeff18d0feff2fdd579f5}\index{punctuality\_analyzer.py@{punctuality\_analyzer.py}!check\_punctuality\_accuracy@{check\_punctuality\_accuracy}}
+\index{check\_punctuality\_accuracy@{check\_punctuality\_accuracy}!punctuality\_analyzer.py@{punctuality\_analyzer.py}}
+\doxysubsubsection{\texorpdfstring{check\_punctuality\_accuracy()}{check\_punctuality\_accuracy()}}
+{\footnotesize\ttfamily \label{punctuality__analyzer_8py_ae3817f3195ddeff18d0feff2fdd579f5} 
+Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+punctuality\+\_\+analyzer.\+check\+\_\+punctuality\+\_\+accuracy (\begin{DoxyParamCaption}\item[{}]{accuracy\+\_\+csv}{, }\item[{}]{punctual\+\_\+buses\+\_\+csv}{}\end{DoxyParamCaption})}
+
+
+
+Entry-\/point function for checking punctuality accuracy and saving results. 
+
+Loads the accuracy CSV file with real-\/time bus data, runs the punctuality analysis, and saves the filtered results to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em accuracy\+\_\+csv} & Path to the CSV file with real-\/time bus tracking data. \\
+\hline
+{\em punctual\+\_\+buses\+\_\+csv} & Output path for the CSV containing punctual bus records. \\
+\hline
+\end{DoxyParams}
