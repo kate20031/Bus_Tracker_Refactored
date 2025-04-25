@@ -20,26 +20,33 @@ jobs:
     - name: Set up Doxygen and dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y doxygen texlive-font-utils  # Install Doxygen and epstopdf
+        sudo apt-get install -y doxygen texlive-font-utils
 
     - name: Run Doxygen
-      run: doxygen Zaliczeniowy_autobusy/Doxyfile
+      run: |
+        doxygen Zaliczeniowy_autobusy/Doxyfile
 
     - name: Deploy to GitHub Pages
       if: success()
       run: |
-        git config --global user.email "katepavlichenko2@gmail.com"
-        git config --global user.name "kate"
-        git checkout --orphan gh-pages
-        git rm -rf .
-        cp -r Zaliczeniowy_autobusy/html/* .
-        git add .
-        git commit -m "Deploy Doxygen documentation"
-        git push origin gh-pages --force
-    
+        if [ -d Zaliczeniowy_autobusy/html ]; then
+          git config --global user.email "katepavlichenko2@gmail.com"
+          git config --global user.name "kate"
+          git checkout --orphan gh-pages
+          git rm -rf .
+          cp -r Zaliczeniowy_autobusy/html/* .
+          git add .
+          git commit -m "Deploy Doxygen documentation"
+          git push origin gh-pages --force
+        else
+          echo "No HTML output found. Deployment skipped."
+          exit 1
+
     - name: Cleanup files (optional)
+      if: always()
       run: |
-        rm -f Zaliczeniowy_autobusy/latex/violation__clusterer_8py.tex
+        rm -rf Zaliczeniowy_autobusy/html
+        rm -rf Zaliczeniowy_autobusy/latex
         rm -f Zaliczeniowy_autobusy/setup.py
         rm -f requirements.txt
         rm -f setup.py
