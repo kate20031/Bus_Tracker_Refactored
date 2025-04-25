@@ -36,3 +36,10 @@ jobs:
         git add .
         git commit -m "Deploy Doxygen documentation"
         git push origin gh-pages --force
+    
+    - name: Cleanup files (optional)
+      run: |
+        rm -f Zaliczeniowy_autobusy/latex/violation__clusterer_8py.tex
+        rm -f Zaliczeniowy_autobusy/setup.py
+        rm -f requirements.txt
+        rm -f setup.py
