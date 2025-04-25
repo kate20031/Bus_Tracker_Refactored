@@ -1,0 +1,5 @@
+var class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1punctuality__analyzer_1_1_punctuality_analyzer =
+[
+    [ "__init__", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1punctuality__analyzer_1_1_punctuality_analyzer.html#a0d97672a2c63f955f68aa9217047a1ed", null ],
+    [ "analyze", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1punctuality__analyzer_1_1_punctuality_analyzer.html#aef3adc9d316dbe182d7ac9e576b131dc", null ]
+];

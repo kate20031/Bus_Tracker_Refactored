@@ -1,0 +1,4 @@
+var class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__calculation__strategy_1_1_speed_calculation_strategy =
+[
+    [ "calculate_speed", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1data__processing_1_1speed__calculation__strategy_1_1_speed_calculation_strategy.html#a0994124d038839af7be0c2167a9c1d0a", null ]
+];
