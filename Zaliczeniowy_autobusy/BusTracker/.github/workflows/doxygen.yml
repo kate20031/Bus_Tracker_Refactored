@@ -1,1 +1,36 @@
+name: Doxygen Documentation
 
+on:
+  push:
+    branches:
+      - master   
+  pull_request:
+    branches:
+      - master  
+
+jobs:
+  doxygen:
+    name: Generate Doxygen Documentation
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Doxygen
+      run: sudo apt-get install doxygen
+
+    - name: Run Doxygen
+      run: doxygen Doxyfile  
+
+    - name: Deploy to GitHub Pages
+      if: success()
+      run: |
+        git config --global user.email "katepavlichenko2@gmail.com"
+        git config --global user.name "kate"
+        git checkout --orphan gh-pages
+        git rm -rf .
+        cp -r docs/html/* .  
+        git add .
+        git commit -m "Deploy Doxygen documentation"
+        git push origin gh-pages --force
