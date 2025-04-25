@@ -37,7 +37,8 @@ jobs:
           git add .
           git commit -m "Deploy Doxygen documentation"
     
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/kate20031/Bus_Tracker_Refactored.git gh-pages --force
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/kate20031/Bus_Tracker_Refactored.git gh-pages --force
+
         else
           echo "No HTML output found. Deployment skipped."
           exit 1
