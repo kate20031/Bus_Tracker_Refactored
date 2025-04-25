@@ -1,0 +1,5 @@
+var class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__api__connection_1_1_test_connect_to_a_p_i =
+[
+    [ "test_connect_to_api", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__api__connection_1_1_test_connect_to_a_p_i.html#ab346255c8d7387fc0de6f0218607b080", null ],
+    [ "test_connect_to_api_invalid_url", "class_zaliczeniowy__autobusy_1_1_bus_tracker_1_1tests_1_1test__api__connection_1_1_test_connect_to_a_p_i.html#a29b61ff6f422f2eef2979173a20c312c", null ]
+];
