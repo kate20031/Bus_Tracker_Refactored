@@ -21,7 +21,7 @@ jobs:
       run: sudo apt-get install doxygen
 
     - name: Run Doxygen
-      run: doxygen Doxyfile  
+      run: doxygen Zaliczeniowy_autobusy/Doxyfile
 
     - name: Deploy to GitHub Pages
       if: success()
