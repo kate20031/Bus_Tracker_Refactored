@@ -8,7 +8,7 @@
 from cmath import asin, cos, sin, sqrt
 from math import radians
 
-from Zaliczeniowy_autobusy.BusTracker.config.constants import KM_TO_M_CONVERSION, EARTH_RADIUS
+from Zaliczeniowy_autobusy.BusTracker.config.constants import KM_TO_M_CONVERSION, EARTH_RADIUS_KM
 
 
 ## @brief Calculates the Haversine distance between two geographical coordinates.
@@ -37,7 +37,7 @@ def haversine_distance(lat1, lon1, lat2, lon2):
     c = 2 * asin(sqrt(a))
 
     # Calculate the distance in meters
-    distance = EARTH_RADIUS * c * KM_TO_M_CONVERSION
+    distance = EARTH_RADIUS_KM * c * KM_TO_M_CONVERSION
 
     # Return the distance as an integer
     return int(distance.real)

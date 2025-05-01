@@ -4,13 +4,13 @@
 #  This module contains functions to load bus tracking data, bus station coordinates, and to perform the analytics
 #  including vehicle speed violations, violations in vicinity, and punctuality accuracy.
 
-from data_processing.bus_analytics import (
+from Zaliczeniowy_autobusy.BusTracker.data_processing.bus_analytics import (
     print_vehicles_over_speed_limit,
     print_violations_in_vicinity,
     print_punctuality_accuracy,
 )
 
-from data_loaders.bus_data_loader import (
+from Zaliczeniowy_autobusy.BusTracker.data_loaders.bus_data_loader import (
     load_bus_tracking_data,
     load_bus_stations_coord,
 )
