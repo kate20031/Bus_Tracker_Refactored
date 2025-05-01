@@ -1,28 +1,22 @@
 @startuml
-scale 100
+    actor Downloader
+    actor Processor
+    actor Calculator
+    actor Analytics
+    actor Output
 
-participant "BusTracker" as BT
-participant "BusDataLoader" as BDL
-participant "BusStationDataLoader" as BSD
-participant "BusTimetableDataLoader" as BTD
-participant "BusDataAnalyzer" as BDA
-participant "UserInterface" as UI
+    Downloader -> Downloader : Active for 7200 sec
+    Downloader -> Downloader : Inactive
 
-== Bus Tracking Process ==
-BT -> BDL : Request bus tracking data
-BDL -> BT : Send bus positions & speeds
+    Processor -> Processor : Active for 30 sec
+    Processor -> Processor : Inactive
 
-== Station Data Request ==
-BT -> BSD : Request station data
-BSD -> BT : Send station locations
+    Calculator -> Calculator : Active for 20 sec
+    Calculator -> Calculator : Inactive
 
-== Timetable Data Request ==
-BT -> BTD : Request timetable data
-BTD -> BT : Send timetable info
+    Analytics -> Analytics : Active for 15 sec
+    Analytics -> Analytics : Inactive
 
-== Punctuality Analysis ==
-BT -> BDA : Analyze punctuality
-BDA -> UI : Generate report
-UI -> BT : Display punctuality stats
-
+    Output -> Output : Active for 0.1 sec
+    Output -> Output : Inactive
 @enduml

@@ -1,0 +1,62 @@
+@startuml
+package "BusTracker" {
+    package "data_loaders" {
+        [load_bus_tracking_data(file_path)]
+        [load_bus_stations_coord(file_path)]
+        [load_bus_timetable_data(busstop_id, busstop_nr, line)]
+    }
+
+    package "src" {
+        [calculate_speed(vehicle, index)]
+        [calculate_max_speed(vehicle)]
+        [get_violation_coordinates(json_data, max_speed)]
+        [get_bus_data(file_path)]
+        [get_data(file_path)]
+        [count_vehicles_over_speed_limit(json_data, max_allowed_speed)]
+        [find_violations_places(coordinates, max_dist, bus_count)]
+        [print_vehicles_over_speed_limit()]
+        [print_violations_in_vicinity()]
+        [print_punctuality_accuracy()]
+    }
+
+    package "utils" {
+        [process_data(r, output_file_path)]
+        [connect_to_api(query_params)]
+    }
+
+    package "config" {
+        [BUS_TRACKER_API_RESOURCE_ID]
+        [API_KEY]
+        [BUS_TRACKER_API_URL]
+        [BUS_OUT1_FILE]
+        [EARLY_HOURS]
+        [LATE_HOURS]
+        [BUS_OUT2_FILE]
+        [BUS_STATION_API_PARAMS]
+        [DATE_FORMAT]
+        [MAX_SPEED]
+        [MAX_DISTANCE]
+        [CSV_ENCODING]
+        [CSV_DELIMITER]
+    }
+}
+
+' Defining vertical relationships (longer diagram)
+data_loaders.load_bus_tracking_data -down-> src.get_bus_data : "uses"
+data_loaders.load_bus_stations_coord -down-> src.get_bus_data : "uses"
+data_loaders.load_bus_timetable_data -down-> src.get_data : "uses"
+src.calculate_speed -down-> src.get_bus_data : "uses"
+src.calculate_max_speed -down-> src.get_bus_data : "uses"
+src.get_violation_coordinates -down-> src.calculate_speed : "calculates speed"
+src.count_vehicles_over_speed_limit -down-> src.get_data : "uses"
+src.find_violations_places -down-> src.get_data : "uses"
+src.print_vehicles_over_speed_limit -down-> src.count_vehicles_over_speed_limit : "uses"
+src.print_violations_in_vicinity -down-> src.find_violations_places : "uses"
+src.print_punctuality_accuracy -down-> src.count_vehicles_over_speed_limit : "uses"
+utils.process_data -down-> data_loaders.load_bus_tracking_data : "processes"
+utils.connect_to_api -down-> data_loaders.load_bus_timetable_data : "uses"
+config.BUS_TRACKER_API_RESOURCE_ID -down-> data_loaders.load_bus_tracking_data : "provides constants"
+config.API_KEY -down-> data_loaders.load_bus_tracking_data : "provides constants"
+config.BUS_OUT1_FILE -down-> src.get_data : "provides constants"
+
+@enduml

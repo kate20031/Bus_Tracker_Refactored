@@ -1,0 +1,34 @@
+@startuml
+actor User
+participant "App" as App
+participant "Transport System (API)" as System
+participant "Bus" as Bus
+participant "Bus Stop" as Stop
+participant "Output (CSV)" as Output
+participant "Violation Calculator" as Violations
+participant "Statistics Display" as Stats
+
+== Режим 1: З API ==
+
+User -> App : Open app (режим API)
+App -> System : Request bus info
+System -> Bus : Get current location
+Bus -> System : Send location
+System -> Stop : Get upcoming stops
+Stop -> System : Send stop info
+System -> App : Send bus & stop info
+App -> Output : Save data (CSV)
+App -> Violations : Calculate violations
+Violations -> App : Send violations data
+App -> Stats : Display violations & statistics
+App -> User : Display bus violations, stats
+
+== Режим 2: Локальні дані ==
+
+User -> App : Open app (режим offline)
+App -> Output : Read saved CSV data
+App -> Violations : Calculate violations from saved data
+Violations -> App : Send violations data
+App -> Stats : Display violations & statistics
+App -> User : Display last known info, violations, stats
+@enduml

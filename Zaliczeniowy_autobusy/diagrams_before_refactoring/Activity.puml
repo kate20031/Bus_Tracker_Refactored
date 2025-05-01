@@ -1,0 +1,68 @@
+@startuml
+
+start
+
+:Start System;
+
+if (API Mode?) then (yes)
+    partition "API Mode" {
+        :Request Data from Transport System (API);
+        :Receive Bus Location & Timetable;
+        if (Data Invalid?) then (yes)
+            :Ignore & Log Issue;
+        endif
+
+        partition "Data Loaders" {
+            :Load Bus Station Coordinates;
+            if (Data Invalid?) then (yes)
+                :Ignore & Log Issue;
+            endif
+
+            :Load Bus Timetable Data;
+            if (Data Invalid?) then (yes)
+                :Ignore & Log Issue;
+            endif
+        }
+
+        partition "Data Storage" {
+            if (Current Hour in EARLY or LATE hours?) then (yes)
+                :Save to BUS_OUT1_FILE or BUS_OUT2_FILE;
+            else
+                :Skip Saving;
+            endif
+            :Save to bus_station_output.csv;
+        }
+
+        :Save to CSV;
+    }
+else
+    partition "Offline Mode" {
+        :Read Data from CSV;
+        if (Data Invalid?) then (yes)
+            :Ignore & Log Issue;
+        endif
+    }
+endif
+
+partition "Data Processing" {
+    :Group by VehicleNumber;
+    :Sort by Time;
+    :Calculate Speeds;
+}
+
+partition "Analytics" {
+    :Count Vehicles Over Speed Limit;
+    :Find Violation Coordinates;
+    :Detect Violations in Vicinity;
+    :Load Punctuality Data;
+    :Check Punctuality Accuracy;
+}
+
+partition "Output" {
+    :Print Vehicles Over Speed Limit;
+    :Print Violation Places in Vicinity;
+    :Print Punctuality Statistics;
+}
+
+stop
+@enduml

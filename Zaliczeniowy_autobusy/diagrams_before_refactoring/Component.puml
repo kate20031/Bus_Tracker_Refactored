@@ -1,21 +1,34 @@
 @startuml
-component "Bus Data Loader" as BDL
-component "Bus API" as API
-component "Utils" as UTL
-component "Database" as DB
-component "Analytics" as ANA
 
-interface IDataFetcher
-interface IDataProcessor
-interface IAnalytics
+package "API Mode" {
+  [API Interface] --> [Transport System API]
+  [API Interface] --> [Data Loaders]
+  [Data Loaders] --> [Bus Station Coordinates]
+  [Data Loaders] --> [Bus Timetable Data]
+  [Data Loaders] --> [Data Processor]
+}
 
-BDL --> API : fetchData()
-BDL --> UTL : processData()
-UTL --> DB : storeData()
-BDL --> ANA : analyzeData()
-ANA --> DB : fetchData()
+package "Offline Mode" {
+  [Offline Data Reader] --> [CSV File]
+  [Offline Data Reader] --> [Data Processor]
+}
 
-BDL ..|> IDataFetcher
-UTL ..|> IDataProcessor
-ANA ..|> IAnalytics
+package "Data Processing" {
+  [Data Processor] --> [Vehicle Data]
+  [Data Processor] --> [Timetable Data]
+  [Data Processor] --> [Speed Calculation]
+}
+
+package "Analytics" {
+  [Analytics Engine] --> [Speed Violations]
+  [Analytics Engine] --> [Punctuality Data]
+  [Analytics Engine] --> [Violation Coordinates]
+}
+
+package "Output" {
+  [Output Printer] --> [Speed Limit Violations]
+  [Output Printer] --> [Violation Places]
+  [Output Printer] --> [Punctuality Statistics]
+}
+
 @enduml

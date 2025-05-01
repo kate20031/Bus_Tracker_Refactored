@@ -1,10 +1,32 @@
 @startuml
-[*] --> Idle
 
-Idle --> LoadingData : Data Loaded
-LoadingData --> TrackingBus : Tracking Started
-TrackingBus --> AnalyzingData : Data Collected
-AnalyzingData --> DisplayingResults : Punctuality Analyzed
-DisplayingResults --> Finished : Results Displayed
+
+[*] --> Start
+
+state Start {
+  [*] --> ChooseMode
+  ChooseMode --> API_Mode : API selected
+  ChooseMode --> Offline_Mode : Offline selected
+}
+
+state API_Mode {
+  [*] --> RequestAPI
+  RequestAPI --> LoadStationData
+  LoadStationData --> LoadTimetableData
+  LoadTimetableData --> ProcessData
+  ProcessData --> Analyze
+  Analyze --> Output
+  Output --> [*]
+}
+
+state Offline_Mode {
+  [*] --> ReadCSV
+  ReadCSV --> ProcessData_Offline
+  ProcessData_Offline --> Analyze_Offline
+  Analyze_Offline --> Output_Offline
+  Output_Offline --> [*]
+}
+
+[*] --> Exit
 
 @enduml

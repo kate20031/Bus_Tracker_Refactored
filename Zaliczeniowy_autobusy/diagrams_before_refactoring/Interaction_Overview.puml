@@ -1,33 +1,61 @@
 @startuml
-start
+!define RECTANGLE class
 
-:User requests bus tracking report;
-partition "BusTracker" {
-    :Request bus tracking data;
-    :Request station data;
-    :Request timetable data;
+' API Mode Interaction Overview
+package "API Mode" {
+  [API Interface] --> [Transport System API]
+  [API Interface] --> [Data Loaders]
+  [Data Loaders] --> [Bus Station Coordinates]
+  [Data Loaders] --> [Bus Timetable Data]
+  [Data Loaders] --> [Data Processor]
 }
 
-if (Data available?) then (yes)
-    partition "Data Loaders" {
-        :Load bus data;
-        :Load station data;
-        :Load timetable data;
-    }
+' Offline Mode Interaction Overview
+package "Offline Mode" {
+  [Offline Data Reader] --> [CSV File]
+  [Offline Data Reader] --> [Data Processor]
+}
 
-    partition "Analyzer" {
-        :Analyze punctuality;
-        :Generate report;
-    }
+' Data Processing
+package "Data Processing" {
+  [Data Processor] --> [Vehicle Data]
+  [Data Processor] --> [Timetable Data]
+  [Data Processor] --> [Speed Calculation]
+}
 
-    partition "User Interface" {
-        :Display statistics;
-    }
+' Analytics Overview
+package "Analytics" {
+  [Analytics Engine] --> [Speed Violations]
+  [Analytics Engine] --> [Punctuality Data]
+  [Analytics Engine] --> [Violation Coordinates]
+}
 
-    :End of process;
-else (no)
-    :Show error message;
-endif
+' Output Overview
+package "Output" {
+  [Output Printer] --> [Speed Limit Violations]
+  [Output Printer] --> [Violation Places]
+  [Output Printer] --> [Punctuality Statistics]
+}
 
-stop
+
+
+[API Interface] -down-> [Data Loaders] : "Load Data (API)"
+[Data Loaders] -down-> [Bus Station Coordinates] : "Load Coordinates"
+[Data Loaders] -down-> [Bus Timetable Data] : "Load Timetable"
+[Data Loaders] -down-> [Data Processor] : "Send Data for Processing"
+[Offline Data Reader] -down-> [CSV File] : "Read Offline Data"
+[Offline Data Reader] -down-> [Data Processor] : "Send Offline Data for Processing"
+
+[Data Processor] -down-> [Vehicle Data] : "Process Vehicle Data"
+[Data Processor] -down-> [Timetable Data] : "Process Timetable Data"
+[Data Processor] -down-> [Speed Calculation] : "Calculate Speed"
+
+[Analytics Engine] -down-> [Speed Violations] : "Identify Speed Violations"
+[Analytics Engine] -down-> [Punctuality Data] : "Generate Punctuality Data"
+[Analytics Engine] -down-> [Violation Coordinates] : "Identify Violation Coordinates"
+
+[Output Printer] -down-> [Speed Limit Violations] : "Print Speed Violations"
+[Output Printer] -down-> [Violation Places] : "Print Violation Locations"
+[Output Printer] -down-> [Punctuality Statistics] : "Print Punctuality Stats"
+
 @enduml

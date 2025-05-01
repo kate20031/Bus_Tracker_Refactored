@@ -1,0 +1,33 @@
+@startuml
+!define RECTANGLE component
+
+' Define system components
+node "BusTracker System" {
+    [BusDataLoader] as busDataLoader
+    [BusTimetableDataLoader] as busTimetableDataLoader
+    [BusAnalytics] as busAnalytics
+    [BusDataCalculations] as busDataCalculations
+    [Utils] as utils
+    [Constants] as constants
+}
+
+' Define external systems (APIs, Data sources)
+node "External Systems" {
+    [API: Bus Tracker API] as apiBusTracker
+    [API: Warsaw Station API] as apiWarsawStation
+    [File Storage] as fileStorage
+}
+
+' Define module dependencies
+busDataLoader --> busTimetableDataLoader : Uses for Timetable Data
+busTimetableDataLoader --> utils : Uses for API connection
+busDataLoader --> apiBusTracker : Fetches data
+busDataLoader --> apiWarsawStation : Fetches bus station data
+busDataCalculations --> busDataLoader : Loads data for calculation
+busDataCalculations --> busAnalytics : Provides data for analytics
+busAnalytics --> busDataCalculations : Requests speed and violation calculations
+
+fileStorage --> busDataLoader : Stores bus tracking data
+fileStorage --> busAnalytics : Stores analytical results
+
+@enduml

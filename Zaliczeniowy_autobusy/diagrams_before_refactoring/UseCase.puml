@@ -1,0 +1,51 @@
+@startuml
+
+actor User
+
+rectangle "API Mode" {
+    usecase "Request Data from Transport System (API)" as UC1
+    usecase "Receive Bus Location & Timetable" as UC2
+    usecase "Load Bus Station Coordinates" as UC3
+    usecase "Load Bus Timetable Data" as UC4
+    usecase "Save Data to CSV" as UC5
+}
+
+rectangle "Offline Mode" {
+    usecase "Read Data from CSV" as UC6
+}
+
+rectangle "Data Processing" {
+    usecase "Group by VehicleNumber" as UC7
+    usecase "Sort by Time" as UC8
+    usecase "Calculate Speeds" as UC9
+}
+
+rectangle "Analytics" {
+    usecase "Count Vehicles Over Speed Limit" as UC10
+    usecase "Find Violation Coordinates" as UC11
+    usecase "Detect Violations in Vicinity" as UC12
+    usecase "Load Punctuality Data" as UC13
+    usecase "Check Punctuality Accuracy" as UC14
+}
+
+rectangle "Output" {
+    usecase "Print Vehicles Over Speed Limit" as UC15
+    usecase "Print Violation Places in Vicinity" as UC16
+    usecase "Print Punctuality Statistics" as UC17
+}
+
+User --> UC1
+User --> UC6
+User --> UC7
+User --> UC8
+User --> UC9
+User --> UC10
+User --> UC11
+User --> UC12
+User --> UC13
+User --> UC14
+User --> UC15
+User --> UC16
+User --> UC17
+
+@enduml

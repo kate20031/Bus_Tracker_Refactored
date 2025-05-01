@@ -1,18 +1,32 @@
 @startuml
-actor User
-participant "BusDataLoader" as BDL
-participant "API" as API
-participant "Utils" as UTL
-participant "Database" as DB
-participant "Analytics" as ANA
 
-User -> BDL : requestBusTrackingData()
-BDL -> API : fetchData()
-API --> BDL : return JSON response
-BDL -> UTL : processData()
-UTL -> DB : storeData()
-BDL -> ANA : analyzeData()
-ANA -> DB : fetchRequiredData()
-ANA --> BDL : returnAnalysisResults()
-BDL --> User : returnReport()
+
+actor User
+
+participant "API Interface" as API
+participant "Data Loaders" as Loaders
+participant "Bus Station Coordinates" as StationCoords
+participant "Bus Timetable Data" as Timetable
+participant "Data Processor" as Processor
+participant "Offline Data Reader" as OfflineReader
+participant "CSV File" as CSV
+participant "Analytics Engine" as Analytics
+participant "Output Printer" as Printer
+
+== API Mode ==
+User -> API : Request data
+API -> Loaders : Load station & timetable
+Loaders -> StationCoords : Get coordinates
+Loaders -> Timetable : Get timetable
+Loaders -> Processor : Send loaded data
+Processor -> Analytics : Analyze data
+Analytics -> Printer : Output results
+
+== Offline Mode ==
+User -> OfflineReader : Read local data
+OfflineReader -> CSV : Read CSV file
+OfflineReader -> Processor : Send data
+Processor -> Analytics : Analyze data
+Analytics -> Printer : Output results
+
 @enduml

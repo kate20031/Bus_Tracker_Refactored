@@ -1,0 +1,57 @@
+@startuml
+title Bus Tracking System - Composite Structure Diagram with API and Offline Modes
+
+' API Mode Structure
+component "API Interface" {
+  component "Transport System API"
+  component "Data Loaders" {
+    component "Bus Station Coordinates"
+    component "Bus Timetable Data"
+  }
+  component "Data Processor"
+}
+
+
+"API Interface" --> "Transport System API" : Fetches data from
+"Data Processor" --> "Data Loaders" : Uses data from
+
+' Offline Mode Structure
+component "Offline Mode" {
+  component "Offline Data Reader" {
+    component "CSV File"
+  }
+  component "Data Processor"
+}
+
+' Connections in Offline Mode
+"Offline Data Reader" --> "CSV File" : Reads data from
+"Data Processor" --> "Offline Data Reader" : Uses offline data
+
+
+
+  component "Data Processor" {
+    component "Vehicle Data"
+    component "Timetable Data"
+    component "Speed Calculation"
+  }
+
+
+
+component "Analytics" {
+  component "Analytics Engine" {
+    component "Speed Violations"
+    component "Punctuality Data"
+    component "Violation Coordinates"
+  }
+}
+
+
+component "Output" {
+  component "Output Printer" {
+    component "Speed Limit Violations"
+    component "Violation Places"
+    component "Punctuality Statistics"
+  }
+}
+
+@enduml
