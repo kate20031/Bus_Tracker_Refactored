@@ -7,7 +7,7 @@
 from abc import ABC, abstractmethod
 from datetime import datetime
 
-from Zaliczeniowy_autobusy.BusTracker.config.constants import DATE_FORMAT, SPEED_CONVERSION
+from Zaliczeniowy_autobusy.BusTracker.config.constants import DATE_FORMAT, SPEED_CONVERSION_TO_KN_H
 from Zaliczeniowy_autobusy.BusTracker.utils.geo_utils import haversine_distance
 
 
@@ -49,6 +49,6 @@ class HaversineSpeedCalculationStrategy(SpeedCalculationStrategy):
         lat1, lon1 = vehicle[index - 1]["Lat"], vehicle[index - 1]["Lon"]
         lat2, lon2 = vehicle[index]["Lat"], vehicle[index]["Lon"]
         distance = haversine_distance(lat1, lon1, lat2, lon2)
-        speed = distance / time_diff * SPEED_CONVERSION if time_diff > 0 else 0
+        speed = distance / time_diff * SPEED_CONVERSION_TO_KN_H if time_diff > 0 else 0
 
         return speed

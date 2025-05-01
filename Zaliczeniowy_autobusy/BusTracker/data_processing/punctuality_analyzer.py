@@ -6,8 +6,8 @@
 
 import pandas as pd
 
-from Zaliczeniowy_autobusy.BusTracker.config.constants import MIN_TIME_DIFF, MAX_TIME_DIFF
-from Zaliczeniowy_autobusy.BusTracker.data_loaders.bus_data_loader import load_timetable_data
+from Zaliczeniowy_autobusy.BusTracker.config.constants import MIN_TIME_DIFF_S, MAX_TIME_DIFF_S
+from Zaliczeniowy_autobusy.BusTracker.data_loaders.bus_data_loader import load_bus_timetable_data
 from Zaliczeniowy_autobusy.BusTracker.utils.bus_data_utils import save_results
 from Zaliczeniowy_autobusy.BusTracker.data_processing.timetable_checker import TimetableChecker
 from Zaliczeniowy_autobusy.BusTracker.main import load_data
@@ -40,13 +40,13 @@ class PunctualityAnalyzer:
             zespol, slupek, lines, real_time = row["Zespol"], row["Slupek"], row["Lines"], row["Time"]
 
             if slupek != prev_slupek or lines != prev_lines:
-                timetable_data = load_timetable_data(zespol, slupek, lines)
+                timetable_data = load_bus_timetable_data(zespol, slupek, lines)
 
             if timetable_data:
                 checker = self.timetable_checker_cls(timetable_data)
                 for timetable_time in checker.filter_timetable_times(timetable_data, real_time):
                     time_diff = checker.calculate_time_diff(timetable_time, real_time)
-                    if MIN_TIME_DIFF < time_diff < MAX_TIME_DIFF:
+                    if MIN_TIME_DIFF_S < time_diff < MAX_TIME_DIFF_S:
                         result_rows.append({
                             "Zespol": zespol,
                             "Slupek": slupek,

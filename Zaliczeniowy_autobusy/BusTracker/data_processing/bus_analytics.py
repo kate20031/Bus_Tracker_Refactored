@@ -14,7 +14,7 @@ from Zaliczeniowy_autobusy.BusTracker.config.constants import (
     PUNCTUAL_BUSES_FILE1,
     PUNCTUAL_BUSES_FILE2,
 )
-from Zaliczeniowy_autobusy.BusTracker.config.constants import MAX_SPEED, MAX_DISTANCE
+from Zaliczeniowy_autobusy.BusTracker.config.constants import MAX_SPEED_KM_H, MAX_DISTANCE_M
 from Zaliczeniowy_autobusy.BusTracker.data_processing.speed_calculation_strategy import \
     HaversineSpeedCalculationStrategy
 from Zaliczeniowy_autobusy.BusTracker.data_processing.speed_violation_checker import SpeedViolationChecker
@@ -35,7 +35,7 @@ bus_count_data2 = len(bus_json2.items())
 #  how many vehicles exceeded the allowed speed during rush and non-rush hours.
 def print_vehicles_over_speed_limit():
     strategy = HaversineSpeedCalculationStrategy()
-    s = SpeedViolationChecker(MAX_SPEED, strategy)
+    s = SpeedViolationChecker(MAX_SPEED_KM_H, strategy)
     count1 = s.count_vehicles_over_speed_limit(bus_json1)
     count2 = s.count_vehicles_over_speed_limit(bus_json2)
     print(f"Vehicles over speed limit during non rush hours: {count1}")
@@ -47,19 +47,19 @@ def print_vehicles_over_speed_limit():
 #  Counts and prints the number of violation clusters (places where many violations happen nearby)
 #  separately for rush and non-rush hours, using a defined distance threshold.
 def print_violations_in_vicinity():
-    violations1 = get_violation_coordinates(bus_json1, MAX_SPEED)
+    violations1 = get_violation_coordinates(bus_json1, MAX_SPEED_KM_H)
     count1 = len(
         find_violations_places(
             violations1,
-            MAX_DISTANCE,
+            MAX_DISTANCE_M,
             bus_count_data1))
     print(f"Violations places in vicinity during non rush hours: {count1}")
 
-    violations2 = get_violation_coordinates(bus_json2, MAX_SPEED)
+    violations2 = get_violation_coordinates(bus_json2, MAX_SPEED_KM_H)
     count2 = len(
         find_violations_places(
             violations2,
-            MAX_DISTANCE,
+            MAX_DISTANCE_M,
             bus_count_data2))
     print(f"Violations places in vicinity during rush hours: {count2}")
 
