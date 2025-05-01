@@ -19,7 +19,7 @@ from Zaliczeniowy_autobusy.BusTracker.config.constants import (
     LATE_HOURS,
     BUS_OUT2_FILE,
     BUS_STATION_API_PARAMS,
-    DATE_FORMAT,
+    DATE_FORMAT, BUS_TIMETABLE_API_PARAMS,
 )
 
 from Zaliczeniowy_autobusy.BusTracker.utils.api_utils import conect_to_api
@@ -90,16 +90,13 @@ def load_bus_timetable_data(busstop_id, busstop_nr, line):
 
     @return JSON response with the timetable data.
     """
-    api_key = "44c76d0d-4ca7-456a-a694-3b4dd63dd2d5"
 
-    query_params = {
-        "id": "e923fa0e-d96c-43f9-ae6e-60518c9f3238",
-        "apikey": api_key,
+    query_params = BUS_TIMETABLE_API_PARAMS.copy()  # копіюємо, щоб не змінювати глобальну змінну
+    query_params.update({
         "busstopId": busstop_id,
         "busstopNr": busstop_nr,
         "line": line,
-    }
-
+    })
     return conect_to_api(query_params)
 
 
@@ -115,16 +112,3 @@ def load_data(file_path):
         parse_dates=["Time"],
         date_parser=lambda x: datetime.strptime(x, DATE_FORMAT),
     )
-
-
-def load_timetable_data(zespol, slupek, lines):
-    """
-    @brief Wrapper function to load timetable data using logical stop identifiers.
-
-    @param zespol Stop group identifier.
-    @param slupek Specific stop number within the group.
-    @param lines Bus line number(s) to query.
-
-    @return JSON response containing timetable information.
-    """
-    return load_bus_timetable_data(zespol, slupek, lines)
