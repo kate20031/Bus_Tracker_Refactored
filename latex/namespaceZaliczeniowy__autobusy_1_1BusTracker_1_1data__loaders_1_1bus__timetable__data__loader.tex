@@ -1,0 +1,35 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+loaders.\+bus\+\_\+timetable\+\_\+data\+\_\+loader Namespace Reference}
+\hypertarget{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__timetable__data__loader}{}\label{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__timetable__data__loader}\index{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_timetable\_data\_loader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_timetable\_data\_loader}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__timetable__data__loader_aaf701523b5b5cd6a6cb644c0d1d87a59}{load\+\_\+bus\+\_\+timetable\+\_\+data}} (bus\+\_\+stop\+\_\+id, bus\+\_\+stop\+\_\+nr, line)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package BusTimetableLoader
+This module loads the bus timetable data.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__timetable__data__loader_aaf701523b5b5cd6a6cb644c0d1d87a59}\label{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__timetable__data__loader_aaf701523b5b5cd6a6cb644c0d1d87a59} 
+\index{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_timetable\_data\_loader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_timetable\_data\_loader}!load\_bus\_timetable\_data@{load\_bus\_timetable\_data}}
+\index{load\_bus\_timetable\_data@{load\_bus\_timetable\_data}!Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_timetable\_data\_loader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_timetable\_data\_loader}}
+\doxysubsubsection{\texorpdfstring{load\_bus\_timetable\_data()}{load\_bus\_timetable\_data()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+loaders.\+bus\+\_\+timetable\+\_\+data\+\_\+loader.\+load\+\_\+bus\+\_\+timetable\+\_\+data (\begin{DoxyParamCaption}\item[{}]{bus\+\_\+stop\+\_\+id,  }\item[{}]{bus\+\_\+stop\+\_\+nr,  }\item[{}]{line }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Fetches bus timetable data for a given stop and line.
+
+This function connects to the Warsaw public transport API and retrieves
+the timetable for the specified bus stop and line. The data is returned
+in JSON format.
+
+@param bus_stop_id ID of the bus stop group ("zespol").
+@param bus_stop_nr Number of the specific stop ("slupek") within the group.
+@param line Bus line number (e.g., "105", "503").
+
+@return JSON object containing timetable data from the API.
+\end{DoxyVerb}
+ 

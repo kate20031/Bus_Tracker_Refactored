@@ -1,0 +1,5 @@
+var classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1punctuality__analyzer_1_1PunctualityAnalyzer =
+[
+    [ "__init__", "classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1punctuality__analyzer_1_1PunctualityAnalyzer.html#a0d97672a2c63f955f68aa9217047a1ed", null ],
+    [ "analyze", "classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1punctuality__analyzer_1_1PunctualityAnalyzer.html#aef3adc9d316dbe182d7ac9e576b131dc", null ]
+];

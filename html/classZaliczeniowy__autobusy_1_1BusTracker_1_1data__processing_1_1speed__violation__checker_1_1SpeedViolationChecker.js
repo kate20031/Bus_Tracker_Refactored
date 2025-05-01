@@ -1,0 +1,8 @@
+var classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1speed__violation__checker_1_1SpeedViolationChecker =
+[
+    [ "__init__", "classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1speed__violation__checker_1_1SpeedViolationChecker.html#a6aa8064f3fec7c6ac2f2070972778af9", null ],
+    [ "calculate_max_speed", "classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1speed__violation__checker_1_1SpeedViolationChecker.html#a2388a2d9628c1d0746c0424411fc10b4", null ],
+    [ "calculate_speed", "classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1speed__violation__checker_1_1SpeedViolationChecker.html#a748f7be0e81eadbc4032eb2815cc6e98", null ],
+    [ "count_vehicles_over_speed_limit", "classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1speed__violation__checker_1_1SpeedViolationChecker.html#a44a02cad0b28e34bd87fb031b6a69326", null ],
+    [ "get_violation_coordinates", "classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1speed__violation__checker_1_1SpeedViolationChecker.html#a321f0b2b62ced1ef97b5b0bbfb307fe9", null ]
+];

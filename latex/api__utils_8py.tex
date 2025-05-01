@@ -1,0 +1,46 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy/\+Bus\+Tracker/utils/api\+\_\+utils.py File Reference}
+\hypertarget{api__utils_8py}{}\label{api__utils_8py}\index{Zaliczeniowy\_autobusy/BusTracker/utils/api\_utils.py@{Zaliczeniowy\_autobusy/BusTracker/utils/api\_utils.py}}
+
+
+This module provides a utility function to connect to the API and fetch data.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{api__utils_8py_aa8aa77833ac822197390eaaeeb3a1384}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+api\+\_\+utils.\+conect\+\_\+to\+\_\+api}} (query\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Connects to the bus timetable API and fetches data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module provides a utility function to connect to the API and fetch data. 
+
+This function sends an HTTP GET request to the API and retrieves the response in JSON format. The data is parsed and returned as a list of records. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{api__utils_8py_aa8aa77833ac822197390eaaeeb3a1384}\label{api__utils_8py_aa8aa77833ac822197390eaaeeb3a1384} 
+\index{api\_utils.py@{api\_utils.py}!conect\_to\_api@{conect\_to\_api}}
+\index{conect\_to\_api@{conect\_to\_api}!api\_utils.py@{api\_utils.py}}
+\doxysubsubsection{\texorpdfstring{conect\_to\_api()}{conect\_to\_api()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+api\+\_\+utils.\+conect\+\_\+to\+\_\+api (\begin{DoxyParamCaption}\item[{}]{query\+\_\+params }\end{DoxyParamCaption})}
+
+
+
+Connects to the bus timetable API and fetches data. 
+
+This function sends a GET request to the API endpoint and retrieves the data in JSON format. It uses the provided {\ttfamily query\+\_\+params} to customize the request. The returned data is extracted from the response and returned as a list of records.
+
+
+\begin{DoxyParams}{Parameters}
+{\em query\+\_\+params} & A dictionary containing the query parameters to send in the GET request. These parameters are used to filter and customize the API response. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of records fetched from the API. Each record corresponds to an item in the "{}result"{} section of the API response.
+\end{DoxyReturn}
+\begin{DoxyVerb}Sends a GET request to the bus timetable API and returns the parsed records.
+
+@param query_params: Dictionary containing the parameters for the GET request.
+@return: A list of records from the API response.
+\end{DoxyVerb}
+ 

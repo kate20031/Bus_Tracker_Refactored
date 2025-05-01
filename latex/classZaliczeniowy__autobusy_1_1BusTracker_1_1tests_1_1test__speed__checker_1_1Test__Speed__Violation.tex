@@ -1,0 +1,104 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+speed\+\_\+checker.\+Test\+\_\+\+Speed\+\_\+\+Violation Class Reference}
+\hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation}{}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation}\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation}}
+
+
+Unit test case for speed violation checking functions.  
+
+
+Inheritance diagram for Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+speed\+\_\+checker.\+Test\+\_\+\+Speed\+\_\+\+Violation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_a035bd5465aeb31fcb9327f849a8b3946}{set\+Up}} (self)
+\begin{DoxyCompactList}\small\item\em Set up any necessary data or configuration for the tests. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_a4160e1fbc45757a671508d3e4911a64c}{tear\+Down}} (self)
+\begin{DoxyCompactList}\small\item\em Clean up any resources or data created during the tests. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_abfac153c89334595d5e7554d6cb61dd5}{test\+\_\+get\+\_\+violation\+\_\+coordinates\+\_\+invalid\+\_\+gps}} (self)
+\begin{DoxyCompactList}\small\item\em Test for invalid GPS coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_a676bfe020e812e9f6d0dbf381cf36c08}{test\+\_\+get\+\_\+violation\+\_\+coordinates\+\_\+multiple\+\_\+violations}} (self)
+\begin{DoxyCompactList}\small\item\em Test for multiple violations in the data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_a0b910aaa29e6b5e77d11632c957b9736}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_a0b910aaa29e6b5e77d11632c957b9736} 
+{\bfseries test\+\_\+output\+\_\+file}
+\item 
+\Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_a0ff87936564b6dc09ad769560142f5be}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_a0ff87936564b6dc09ad769560142f5be} 
+{\bfseries test\+\_\+results\+\_\+df}
+\item 
+\Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_ad01e1bb9c2ae8a85b3058722959ae723}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_ad01e1bb9c2ae8a85b3058722959ae723} 
+{\bfseries speed\+\_\+violation\+\_\+checker}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Unit test case for speed violation checking functions. 
+
+This test case includes tests for detecting speed violations in bus data, including handling invalid coordinates and multiple violations in the data. It uses a {\ttfamily Speed\+Violation\+Checker} and {\ttfamily Haversine\+Speed\+Calculation\+Strategy} to process and check for violations based on GPS data.
+
+\begin{DoxyVerb}Test cases for functions in the bus_data_calculations module.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_a035bd5465aeb31fcb9327f849a8b3946}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_a035bd5465aeb31fcb9327f849a8b3946} 
+\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation}!setUp@{setUp}}
+\index{setUp@{setUp}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation}}
+\doxysubsubsection{\texorpdfstring{setUp()}{setUp()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+speed\+\_\+checker.\+Test\+\_\+\+Speed\+\_\+\+Violation.\+set\+Up (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Set up any necessary data or configuration for the tests. 
+
+This method is called before each test method is executed. It initializes necessary test data and configurations.
+
+\begin{DoxyVerb}Set up any necessary data or configuration for your tests.\end{DoxyVerb}
+ \Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_a4160e1fbc45757a671508d3e4911a64c}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_a4160e1fbc45757a671508d3e4911a64c} 
+\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation}!tearDown@{tearDown}}
+\index{tearDown@{tearDown}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation}}
+\doxysubsubsection{\texorpdfstring{tearDown()}{tearDown()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+speed\+\_\+checker.\+Test\+\_\+\+Speed\+\_\+\+Violation.\+tear\+Down (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Clean up any resources or data created during the tests. 
+
+This method is called after each test method is executed. It removes any files or resources created during tests.
+
+\begin{DoxyVerb}Clean up any resources or data created during the tests.\end{DoxyVerb}
+ \Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_abfac153c89334595d5e7554d6cb61dd5}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_abfac153c89334595d5e7554d6cb61dd5} 
+\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation}!test\_get\_violation\_coordinates\_invalid\_gps@{test\_get\_violation\_coordinates\_invalid\_gps}}
+\index{test\_get\_violation\_coordinates\_invalid\_gps@{test\_get\_violation\_coordinates\_invalid\_gps}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation}}
+\doxysubsubsection{\texorpdfstring{test\_get\_violation\_coordinates\_invalid\_gps()}{test\_get\_violation\_coordinates\_invalid\_gps()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+speed\+\_\+checker.\+Test\+\_\+\+Speed\+\_\+\+Violation.\+test\+\_\+get\+\_\+violation\+\_\+coordinates\+\_\+invalid\+\_\+gps (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Test for invalid GPS coordinates. 
+
+This test validates that the system correctly handles invalid GPS coordinates (outside valid ranges). It ensures that no violations are detected when the coordinates are invalid.
+
+\begin{DoxyVerb}Test for invalid GPS coordinates.\end{DoxyVerb}
+ \Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_a676bfe020e812e9f6d0dbf381cf36c08}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__speed__checker_1_1Test__Speed__Violation_a676bfe020e812e9f6d0dbf381cf36c08} 
+\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation}!test\_get\_violation\_coordinates\_multiple\_violations@{test\_get\_violation\_coordinates\_multiple\_violations}}
+\index{test\_get\_violation\_coordinates\_multiple\_violations@{test\_get\_violation\_coordinates\_multiple\_violations}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_speed\_checker.Test\_Speed\_Violation}}
+\doxysubsubsection{\texorpdfstring{test\_get\_violation\_coordinates\_multiple\_violations()}{test\_get\_violation\_coordinates\_multiple\_violations()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+speed\+\_\+checker.\+Test\+\_\+\+Speed\+\_\+\+Violation.\+test\+\_\+get\+\_\+violation\+\_\+coordinates\+\_\+multiple\+\_\+violations (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Test for multiple violations in the data. 
+
+This test checks for multiple speed violations in the bus data. It simulates a scenario where multiple data points exceed the speed limit, ensuring that the system correctly detects all the violations.
+
+\begin{DoxyVerb}Test for multiple violations in the data.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Zaliczeniowy\+\_\+autobusy/\+Bus\+Tracker/tests/\mbox{\hyperlink{test__speed__checker_8py}{test\+\_\+speed\+\_\+checker.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,48 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+speed\+\_\+calculation\+\_\+factory.\+Speed\+Calculation\+Factory Class Reference}
+\hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1speed__calculation__factory_1_1SpeedCalculationFactory}{}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1speed__calculation__factory_1_1SpeedCalculationFactory}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_calculation\_factory.SpeedCalculationFactory@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_calculation\_factory.SpeedCalculationFactory}}
+
+
+Factory class for instantiating speed calculation strategies.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1speed__calculation__factory_1_1SpeedCalculationFactory_a766778e3cb717f4e22a1a5f35a77e45e}{get\+\_\+strategy}} (str strategy\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Returns an instance of a speed calculation strategy based on the given name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory class for instantiating speed calculation strategies. 
+
+Currently supports the "{}haversine"{} strategy, but is designed for easy extension. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1speed__calculation__factory_1_1SpeedCalculationFactory_a766778e3cb717f4e22a1a5f35a77e45e}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1speed__calculation__factory_1_1SpeedCalculationFactory_a766778e3cb717f4e22a1a5f35a77e45e} 
+\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_calculation\_factory.SpeedCalculationFactory@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_calculation\_factory.SpeedCalculationFactory}!get\_strategy@{get\_strategy}}
+\index{get\_strategy@{get\_strategy}!Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_calculation\_factory.SpeedCalculationFactory@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.speed\_calculation\_factory.SpeedCalculationFactory}}
+\doxysubsubsection{\texorpdfstring{get\_strategy()}{get\_strategy()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+speed\+\_\+calculation\+\_\+factory.\+Speed\+Calculation\+Factory.\+get\+\_\+strategy (\begin{DoxyParamCaption}\item[{str}]{strategy\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns an instance of a speed calculation strategy based on the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strategy\+\_\+name} & Name of the strategy to be returned (e.\+g., "{}haversine"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of a speed calculation strategy. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Value\+Error} & if the strategy name is unknown. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Zaliczeniowy\+\_\+autobusy/\+Bus\+Tracker/data\+\_\+processing/\mbox{\hyperlink{speed__calculation__factory_8py}{speed\+\_\+calculation\+\_\+factory.\+py}}\end{DoxyCompactItemize}

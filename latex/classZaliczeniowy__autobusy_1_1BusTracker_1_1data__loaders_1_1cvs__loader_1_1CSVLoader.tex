@@ -1,0 +1,76 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+loaders.\+cvs\+\_\+loader.\+CSVLoader Class Reference}
+\hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1cvs__loader_1_1CSVLoader}{}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1cvs__loader_1_1CSVLoader}\index{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.cvs\_loader.CSVLoader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.cvs\_loader.CSVLoader}}
+
+
+Class for loading CSV data and converting stringified dictionaries into Python dictionaries.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1cvs__loader_1_1CSVLoader_a4e5ae00020e4eb961ed3d871588d030d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, encoding="{}utf-\/8"{}, delimiter="{},"{})
+\begin{DoxyCompactList}\small\item\em Constructor for CSVLoader. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1cvs__loader_1_1CSVLoader_ae485eaeeecd8d01b3924db6bd24a8baa}{load\+\_\+as\+\_\+dicts}} (self, file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Loads a CSV file and returns its content as a list of dictionaries. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1cvs__loader_1_1CSVLoader_a04faa04b520266bc43b35b8eef91674a}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1cvs__loader_1_1CSVLoader_a04faa04b520266bc43b35b8eef91674a} 
+{\bfseries encoding}
+\item 
+\Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1cvs__loader_1_1CSVLoader_a6fa99b2274e24e2dd504a6a53d575857}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1cvs__loader_1_1CSVLoader_a6fa99b2274e24e2dd504a6a53d575857} 
+{\bfseries delimiter}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for loading CSV data and converting stringified dictionaries into Python dictionaries. 
+
+The CSVLoader class reads a CSV file where each row contains a string representation of a Python dictionary and returns a list of actual dictionaries. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1cvs__loader_1_1CSVLoader_a4e5ae00020e4eb961ed3d871588d030d}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1cvs__loader_1_1CSVLoader_a4e5ae00020e4eb961ed3d871588d030d} 
+\index{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.cvs\_loader.CSVLoader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.cvs\_loader.CSVLoader}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Zaliczeniowy\_autobusy.BusTracker.data\_loaders.cvs\_loader.CSVLoader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.cvs\_loader.CSVLoader}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+loaders.\+cvs\+\_\+loader.\+CSVLoader.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{encoding = {\ttfamily "{}utf-\/8"{}},  }\item[{}]{delimiter = {\ttfamily "{},"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructor for CSVLoader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoding} & The encoding used to open the CSV file (default\+: "{}utf-\/8"{}). \\
+\hline
+{\em delimiter} & The delimiter used in the CSV file (default\+: "{},"{}). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1cvs__loader_1_1CSVLoader_ae485eaeeecd8d01b3924db6bd24a8baa}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1cvs__loader_1_1CSVLoader_ae485eaeeecd8d01b3924db6bd24a8baa} 
+\index{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.cvs\_loader.CSVLoader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.cvs\_loader.CSVLoader}!load\_as\_dicts@{load\_as\_dicts}}
+\index{load\_as\_dicts@{load\_as\_dicts}!Zaliczeniowy\_autobusy.BusTracker.data\_loaders.cvs\_loader.CSVLoader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.cvs\_loader.CSVLoader}}
+\doxysubsubsection{\texorpdfstring{load\_as\_dicts()}{load\_as\_dicts()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+loaders.\+cvs\+\_\+loader.\+CSVLoader.\+load\+\_\+as\+\_\+dicts (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Loads a CSV file and returns its content as a list of dictionaries. 
+
+Assumes that each row (excluding the header) contains a single stringified dictionary.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+path} & Path to the CSV file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of dictionaries parsed from the stringified data in the CSV. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Zaliczeniowy\+\_\+autobusy/\+Bus\+Tracker/data\+\_\+loaders/cvs\+\_\+loader.\+py\end{DoxyCompactItemize}

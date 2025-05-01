@@ -1,0 +1,116 @@
+\chapter{Глосарій}
+\hypertarget{md_Zaliczeniowy__autobusy_2glossary}{}\label{md_Zaliczeniowy__autobusy_2glossary}\index{Глосарій@{Глосарій}}
+\label{md_Zaliczeniowy__autobusy_2glossary_autotoc_md0}%
+\Hypertarget{md_Zaliczeniowy__autobusy_2glossary_autotoc_md0}%
+
+
+\DoxyHorRuler{0}
+ \hypertarget{md_Zaliczeniowy__autobusy_2glossary_autotoc_md2}{}\doxysubsection{\texorpdfstring{Автобус (\+Bus)}{Автобус (Bus)}}\label{md_Zaliczeniowy__autobusy_2glossary_autotoc_md2}
+У цьому проєкті кожен автобус має\+:
+\begin{DoxyItemize}
+\item унікальний ідентифікатор;
+\item розклад руху;
+\item GPS-\/дані для відстеження позиції;
+\item список зупинок маршруту.
+\end{DoxyItemize}\hypertarget{md_Zaliczeniowy__autobusy_2glossary_autotoc_md3}{}\doxysubsection{\texorpdfstring{Violation (Порушення)}{Violation (Порушення)}}\label{md_Zaliczeniowy__autobusy_2glossary_autotoc_md3}
+У цьому проєкті violation для автобуса — це\+:
+\begin{DoxyItemize}
+\item перевищення швидкості;
+\item відхилення від розкладу (прибуття раніше/пізніше).
+\end{DoxyItemize}
+
+Виявляється за допомогою аналізу GPS-\/даних, координат зупинок і розкладу.\hypertarget{md_Zaliczeniowy__autobusy_2glossary_autotoc_md4}{}\doxysection{\texorpdfstring{Ключі JSON-\/відповіді}{Ключі JSON-відповіді}}\label{md_Zaliczeniowy__autobusy_2glossary_autotoc_md4}
+\hypertarget{md_Zaliczeniowy__autobusy_2glossary_autotoc_md5}{}\doxysubsection{\texorpdfstring{Дані зупинки\+:}{Дані зупинки:}}\label{md_Zaliczeniowy__autobusy_2glossary_autotoc_md5}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Ключ   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Опис    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Ключ   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Опис    }\\\cline{1-2}
+\endhead
+{\ttfamily zespol}   &ID групи зупинок    \\\cline{1-2}
+{\ttfamily slupek}   &Номер стовпчика ({\ttfamily 01}, {\ttfamily 02}, тощо)    \\\cline{1-2}
+{\ttfamily nazwa\+\_\+zespolu}   &Назва зупинки    \\\cline{1-2}
+{\ttfamily id\+\_\+ulicy}   &ID вулиці    \\\cline{1-2}
+{\ttfamily szer\+\_\+geo}   &Географічна широта    \\\cline{1-2}
+{\ttfamily dlug\+\_\+geo}   &Географічна довгота    \\\cline{1-2}
+{\ttfamily kierunek}   &Напрямок руху    \\\cline{1-2}
+{\ttfamily obowiazuje\+\_\+od}   &Дата початку дії   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md_Zaliczeniowy__autobusy_2glossary_autotoc_md6}{}\doxysubsection{\texorpdfstring{Дані про транспорт (автобус)\+:}{Дані про транспорт (автобус):}}\label{md_Zaliczeniowy__autobusy_2glossary_autotoc_md6}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Ключ   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Опис    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Ключ   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Опис    }\\\cline{1-2}
+\endhead
+{\ttfamily Lines}   &Номер маршруту    \\\cline{1-2}
+{\ttfamily Lon}   &Довгота транспортного засобу    \\\cline{1-2}
+{\ttfamily Lat}   &Широта транспортного засобу    \\\cline{1-2}
+{\ttfamily Vehicle\+Number}   &Номер транспортного засобу    \\\cline{1-2}
+{\ttfamily Brigade}   &Номер бригади (графік)    \\\cline{1-2}
+{\ttfamily Time}   &Час оновлення (UTC)   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md_Zaliczeniowy__autobusy_2glossary_autotoc_md7}{}\doxysection{\texorpdfstring{Додаткові змінні}{Додаткові змінні}}\label{md_Zaliczeniowy__autobusy_2glossary_autotoc_md7}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Назва змінної   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Опис    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Назва змінної   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Опис    }\\\cline{1-2}
+\endhead
+{\ttfamily API\+\_\+\+KEY}   &Ключ доступу до API    \\\cline{1-2}
+{\ttfamily EARLY\+\_\+\+HOURS}   &Години ранкових пік    \\\cline{1-2}
+{\ttfamily LATE\+\_\+\+HOURS}   &Години вечірніх пік   \\\cline{1-2}
+\end{longtabu}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_Zaliczeniowy__autobusy_2glossary_autotoc_md9}{}\doxysection{\texorpdfstring{API-\/адреси}{API-адреси}}\label{md_Zaliczeniowy__autobusy_2glossary_autotoc_md9}
+\hypertarget{md_Zaliczeniowy__autobusy_2glossary_autotoc_md10}{}\doxysubsection{\texorpdfstring{1. Відстеження транспорту}{1. Відстеження транспорту}}\label{md_Zaliczeniowy__autobusy_2glossary_autotoc_md10}
+Отримання поточних координат автобусів або трамваїв.
+
+{\bfseries{Базова URL-\/адреса\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{https://api.um.warszawa.pl/api/action/busestrams\_get/}
+
+\end{DoxyCode}
+
+
+{\bfseries{ID ресурсу\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{f2e5503e-\/927d-\/4ad3-\/9500-\/4ab9e55deb59}
+
+\end{DoxyCode}
+
+
+{\bfseries{Параметри\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily resource\+\_\+id} — Ідентифікатор ресурсу
+\item {\ttfamily apikey} — Ключ розробника
+\end{DoxyItemize}\hypertarget{md_Zaliczeniowy__autobusy_2glossary_autotoc_md11}{}\doxysubsection{\texorpdfstring{2. Інформація про зупинки}{2. Інформація про зупинки}}\label{md_Zaliczeniowy__autobusy_2glossary_autotoc_md11}
+Надає координати зупинки, напрямок, тощо.
+
+{\bfseries{Базова URL-\/адреса\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{https://api.um.warszawa.pl/api/action/dbstore\_get/}
+
+\end{DoxyCode}
+
+
+{\bfseries{ID ресурсу\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1c08a38c-\/ae09-\/46d2-\/8926-\/4f9d25cb0630}
+
+\end{DoxyCode}
+ 

@@ -1,0 +1,72 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+api\+\_\+connection.\+Test\+Connect\+To\+API Class Reference}
+\hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__api__connection_1_1TestConnectToAPI}{}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__api__connection_1_1TestConnectToAPI}\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_api\_connection.TestConnectToAPI@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_api\_connection.TestConnectToAPI}}
+
+
+Unit test case for the {\ttfamily connect\+\_\+to\+\_\+api} function.  
+
+
+Inheritance diagram for Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+api\+\_\+connection.\+Test\+Connect\+To\+API\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__api__connection_1_1TestConnectToAPI}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__api__connection_1_1TestConnectToAPI_ab346255c8d7387fc0de6f0218607b080}{test\+\_\+connect\+\_\+to\+\_\+api}} (self, mock\+\_\+get)
+\begin{DoxyCompactList}\small\item\em Test the successful connection to the API. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__api__connection_1_1TestConnectToAPI_a29b61ff6f422f2eef2979173a20c312c}{test\+\_\+connect\+\_\+to\+\_\+api\+\_\+invalid\+\_\+url}} (self, mock\+\_\+get)
+\begin{DoxyCompactList}\small\item\em Test for handling an invalid URL and exceptions in the {\ttfamily connect\+\_\+to\+\_\+api} function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Unit test case for the {\ttfamily connect\+\_\+to\+\_\+api} function. 
+
+This test case verifies the functionality of the {\ttfamily connect\+\_\+to\+\_\+api} function. It mocks the {\ttfamily requests.\+get} call to simulate a successful response and checks that the function returns the correct records.
+
+\begin{DoxyVerb}Test cases for the connect_to_api function.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__api__connection_1_1TestConnectToAPI_ab346255c8d7387fc0de6f0218607b080}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__api__connection_1_1TestConnectToAPI_ab346255c8d7387fc0de6f0218607b080} 
+\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_api\_connection.TestConnectToAPI@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_api\_connection.TestConnectToAPI}!test\_connect\_to\_api@{test\_connect\_to\_api}}
+\index{test\_connect\_to\_api@{test\_connect\_to\_api}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_api\_connection.TestConnectToAPI@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_api\_connection.TestConnectToAPI}}
+\doxysubsubsection{\texorpdfstring{test\_connect\_to\_api()}{test\_connect\_to\_api()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+api\+\_\+connection.\+Test\+Connect\+To\+API.\+test\+\_\+connect\+\_\+to\+\_\+api (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+get }\end{DoxyParamCaption})}
+
+
+
+Test the successful connection to the API. 
+
+This test mocks the {\ttfamily requests.\+get} call to simulate a successful API request and validates that the {\ttfamily connect\+\_\+to\+\_\+api} function returns the expected records.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mock\+\_\+get} & Mocked version of {\ttfamily requests.\+get} method.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVerb}Test the connect_to_api function.\end{DoxyVerb}
+ \Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__api__connection_1_1TestConnectToAPI_a29b61ff6f422f2eef2979173a20c312c}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1tests_1_1test__api__connection_1_1TestConnectToAPI_a29b61ff6f422f2eef2979173a20c312c} 
+\index{Zaliczeniowy\_autobusy.BusTracker.tests.test\_api\_connection.TestConnectToAPI@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_api\_connection.TestConnectToAPI}!test\_connect\_to\_api\_invalid\_url@{test\_connect\_to\_api\_invalid\_url}}
+\index{test\_connect\_to\_api\_invalid\_url@{test\_connect\_to\_api\_invalid\_url}!Zaliczeniowy\_autobusy.BusTracker.tests.test\_api\_connection.TestConnectToAPI@{Zaliczeniowy\_autobusy.BusTracker.tests.test\_api\_connection.TestConnectToAPI}}
+\doxysubsubsection{\texorpdfstring{test\_connect\_to\_api\_invalid\_url()}{test\_connect\_to\_api\_invalid\_url()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+tests.\+test\+\_\+api\+\_\+connection.\+Test\+Connect\+To\+API.\+test\+\_\+connect\+\_\+to\+\_\+api\+\_\+invalid\+\_\+url (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mock\+\_\+get }\end{DoxyParamCaption})}
+
+
+
+Test for handling an invalid URL and exceptions in the {\ttfamily connect\+\_\+to\+\_\+api} function. 
+
+This test simulates a situation where the {\ttfamily requests.\+get} call raises a {\ttfamily Request\+Exception}. It checks that the {\ttfamily connect\+\_\+to\+\_\+api} function raises the correct exception.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mock\+\_\+get} & Mocked version of {\ttfamily requests.\+get} method.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVerb}Test for an invalid API URL, simulating a request exception.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Zaliczeniowy\+\_\+autobusy/\+Bus\+Tracker/tests/\mbox{\hyperlink{test__api__connection_8py}{test\+\_\+api\+\_\+connection.\+py}}\end{DoxyCompactItemize}

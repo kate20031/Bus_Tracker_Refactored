@@ -1,0 +1,106 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy/\+Bus\+Tracker/utils/stop\+\_\+utils.py File Reference}
+\hypertarget{stop__utils_8py}{}\label{stop__utils_8py}\index{Zaliczeniowy\_autobusy/BusTracker/utils/stop\_utils.py@{Zaliczeniowy\_autobusy/BusTracker/utils/stop\_utils.py}}
+
+
+This module contains functions for loading and processing vehicle accuracy data related to bus stop locations and punctuality.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stop__utils_8py_aa0566885531fef3460149f7b2fbabfe1}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+stop\+\_\+utils.\+find\+\_\+stop}} (lat, lon, stops\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Finds a bus stop based on geographical coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stop__utils_8py_a6511835cdefc84fb98e63d7d4834322e}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+stop\+\_\+utils.\+load\+\_\+vehicle\+\_\+accuracy}} (vehicle\+\_\+json, stops\+\_\+data, new\+\_\+json\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Loads vehicle accuracy data by matching vehicles to bus stops. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stop__utils_8py_a823e1d9ae45c4e8d3c96c9707b65535f}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+stop\+\_\+utils.\+load\+\_\+punctuality\+\_\+accuracy}} (bus\+\_\+data, stops\+\_\+data, bus\+\_\+data\+\_\+output)
+\begin{DoxyCompactList}\small\item\em Loads punctuality accuracy data and writes it to a CSV file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module contains functions for loading and processing vehicle accuracy data related to bus stop locations and punctuality. 
+
+The functions in this module find bus stops for specific coordinates, calculate distance between them, and determine whether a bus is at the correct stop at the expected time. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{stop__utils_8py_aa0566885531fef3460149f7b2fbabfe1}\label{stop__utils_8py_aa0566885531fef3460149f7b2fbabfe1} 
+\index{stop\_utils.py@{stop\_utils.py}!find\_stop@{find\_stop}}
+\index{find\_stop@{find\_stop}!stop\_utils.py@{stop\_utils.py}}
+\doxysubsubsection{\texorpdfstring{find\_stop()}{find\_stop()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+stop\+\_\+utils.\+find\+\_\+stop (\begin{DoxyParamCaption}\item[{}]{lat,  }\item[{}]{lon,  }\item[{}]{stops\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Finds a bus stop based on geographical coordinates. 
+
+This function checks each stop in the provided stop data and calculates the distance between the input coordinates and each stop\textquotesingle{}s coordinates. If the distance is less than or equal to 1 meter, it returns the matching bus stop\textquotesingle{}s {\ttfamily zespol} (team) and {\ttfamily slupek} (pole).
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat} & Latitude of the vehicle\textquotesingle{}s current location. \\
+\hline
+{\em lon} & Longitude of the vehicle\textquotesingle{}s current location. \\
+\hline
+{\em stops\+\_\+data} & List of bus stops data that includes geographical coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tuple containing the {\ttfamily zespol} (team) and {\ttfamily slupek} (pole) if a matching stop is found; otherwise, {\ttfamily None, None}.
+\end{DoxyReturn}
+\begin{DoxyVerb}This function takes in latitude, longitude, and stop data.
+It then finds and returns the stop matching the input coordinates.
+\end{DoxyVerb}
+ \Hypertarget{stop__utils_8py_a823e1d9ae45c4e8d3c96c9707b65535f}\label{stop__utils_8py_a823e1d9ae45c4e8d3c96c9707b65535f} 
+\index{stop\_utils.py@{stop\_utils.py}!load\_punctuality\_accuracy@{load\_punctuality\_accuracy}}
+\index{load\_punctuality\_accuracy@{load\_punctuality\_accuracy}!stop\_utils.py@{stop\_utils.py}}
+\doxysubsubsection{\texorpdfstring{load\_punctuality\_accuracy()}{load\_punctuality\_accuracy()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+stop\+\_\+utils.\+load\+\_\+punctuality\+\_\+accuracy (\begin{DoxyParamCaption}\item[{}]{bus\+\_\+data,  }\item[{}]{stops\+\_\+data,  }\item[{}]{bus\+\_\+data\+\_\+output }\end{DoxyParamCaption})}
+
+
+
+Loads punctuality accuracy data and writes it to a CSV file. 
+
+This function processes bus data and calculates punctuality accuracy by finding the closest bus stop for each vehicle. The resulting data is saved in a CSV file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bus\+\_\+data} & A dictionary of vehicle data, where each entry represents a specific vehicle\textquotesingle{}s data. \\
+\hline
+{\em stops\+\_\+data} & List of bus stops data, including the stops\textquotesingle{} coordinates. \\
+\hline
+{\em bus\+\_\+data\+\_\+output} & Path to the CSV file where the resulting accuracy data will be written. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The processed vehicle data with added accuracy information.
+\end{DoxyReturn}
+\begin{DoxyVerb}This function loads punctuality accuracy data.
+It creates a new data frame with
+the vehicle accuracy data calculated for all vehicles in bus_data
+and writes it to a CSV file.
+\end{DoxyVerb}
+ \Hypertarget{stop__utils_8py_a6511835cdefc84fb98e63d7d4834322e}\label{stop__utils_8py_a6511835cdefc84fb98e63d7d4834322e} 
+\index{stop\_utils.py@{stop\_utils.py}!load\_vehicle\_accuracy@{load\_vehicle\_accuracy}}
+\index{load\_vehicle\_accuracy@{load\_vehicle\_accuracy}!stop\_utils.py@{stop\_utils.py}}
+\doxysubsubsection{\texorpdfstring{load\_vehicle\_accuracy()}{load\_vehicle\_accuracy()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+stop\+\_\+utils.\+load\+\_\+vehicle\+\_\+accuracy (\begin{DoxyParamCaption}\item[{}]{vehicle\+\_\+json,  }\item[{}]{stops\+\_\+data,  }\item[{}]{new\+\_\+json\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Loads vehicle accuracy data by matching vehicles to bus stops. 
+
+This function iterates through the provided vehicle data and finds the closest bus stop for each vehicle\textquotesingle{}s geographical coordinates. It then adds the stop information ({\ttfamily zespol}, {\ttfamily slupek}) to the vehicle\textquotesingle{}s data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle\+\_\+json} & List of vehicle data, including the vehicle\textquotesingle{}s geographical coordinates. \\
+\hline
+{\em stops\+\_\+data} & List of bus stops data, including the stops\textquotesingle{} coordinates. \\
+\hline
+{\em new\+\_\+json\+\_\+data} & A list where the updated vehicle data with bus stop information will be appended.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVerb}This function loads vehicle accuracy data by finding
+stops for specific coordinates
+and updating new_json_data with these findings.
+\end{DoxyVerb}
+ 

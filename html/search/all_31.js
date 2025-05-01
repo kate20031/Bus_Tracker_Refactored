@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['швидкості_0',['швидкості',['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md30',1,'&lt;strong&gt;SpeedCalculationFactory&lt;/strong&gt; (Фабрика обчислення швидкості)'],['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md28',1,'&lt;strong&gt;SpeedViolationChecker&lt;/strong&gt; (Перевірка порушень швидкості)'],['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md29',1,'&lt;strong&gt;SpeedViolationCheckerFactory&lt;/strong&gt; (Фабрика порушень швидкості)'],['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md32',1,'&lt;strong&gt;ViolationClusterer&lt;/strong&gt; (Кластеризація порушень швидкості)']]]
+];

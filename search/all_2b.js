@@ -1,0 +1,18 @@
+var searchData=
+[
+  ['патерн_20стратегія_0',['2. Патерн &quot;Стратегія&quot;',['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md14',1,'']]],
+  ['патерн_20стратегія_20strategy_20pattern_20_3a_20strong_1',['&lt;strong&gt;Патерн &quot;Стратегія&quot; (Strategy Pattern):&lt;/strong&gt;',['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md37',1,'']]],
+  ['патерн_20фабрика_20factory_20pattern_20_3a_20strong_2',['&lt;strong&gt;Патерн &quot;Фабрика&quot; (Factory Pattern):&lt;/strong&gt;',['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md38',1,'']]],
+  ['перевірка_20порушень_20швидкості_3',['&lt;strong&gt;SpeedViolationChecker&lt;/strong&gt; (Перевірка порушень швидкості)',['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md28',1,'']]],
+  ['покращення_20когезії_4',['10. Зменшення зв&apos;язності та покращення когезії',['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md22',1,'']]],
+  ['порушення_5',['Violation (Порушення)',['../md_Zaliczeniowy__autobusy_2glossary.html#autotoc_md3',1,'']]],
+  ['порушень_20швидкості_6',['порушень швидкості',['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md28',1,'&lt;strong&gt;SpeedViolationChecker&lt;/strong&gt; (Перевірка порушень швидкості)'],['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md29',1,'&lt;strong&gt;SpeedViolationCheckerFactory&lt;/strong&gt; (Фабрика порушень швидкості)'],['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md32',1,'&lt;strong&gt;ViolationClusterer&lt;/strong&gt; (Кластеризація порушень швидкості)']]],
+  ['принципи_20single_20responsibility_20і_20dependency_20inversion_7',['8. SOLID (особливо принципи &quot;Single Responsibility&quot; і &quot;Dependency Inversion&quot;)',['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md20',1,'']]],
+  ['принцип_20відкритості_20закритості_20open_20closed_20principle_20_3a_20strong_8',['&lt;strong&gt;Принцип відкритості/закритості (Open/Closed Principle):&lt;/strong&gt;',['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md40',1,'']]],
+  ['принцип_20найменшого_20здивування_20law_20of_20demeter_9',['11. Принцип найменшого здивування (Law of Demeter)',['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md23',1,'']]],
+  ['простота_20kiss_20keep_20it_20simple_20stupid_10',['4. Простота (KISS - Keep It Simple, Stupid)',['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md16',1,'']]],
+  ['про_20зупинки_11',['2. Інформація про зупинки',['../md_Zaliczeniowy__autobusy_2glossary.html#autotoc_md11',1,'']]],
+  ['про_20транспорт_20автобус_20_3a_12',['Дані про транспорт (автобус):',['../md_Zaliczeniowy__autobusy_2glossary.html#autotoc_md6',1,'']]],
+  ['пунктуальності_13',['&lt;strong&gt;PunctualityAnalyzer&lt;/strong&gt; (Аналіз пунктуальності)',['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md31',1,'']]],
+  ['підвищення_20тестованості_14',['9. Підвищення тестованості',['..//home/runner/work/Bus_Tracker_Refactored/Bus_Tracker_Refactored/Zaliczeniowy_autobusy/README.md#autotoc_md21',1,'']]]
+];

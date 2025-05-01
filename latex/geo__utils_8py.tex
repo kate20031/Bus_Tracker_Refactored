@@ -1,0 +1,49 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy/\+Bus\+Tracker/utils/geo\+\_\+utils.py File Reference}
+\hypertarget{geo__utils_8py}{}\label{geo__utils_8py}\index{Zaliczeniowy\_autobusy/BusTracker/utils/geo\_utils.py@{Zaliczeniowy\_autobusy/BusTracker/utils/geo\_utils.py}}
+
+
+This module contains the implementation of the Haversine formula to calculate the distance between two geographical coordinates.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{geo__utils_8py_a43be89ba5a0b419cb7e65f25a5716184}{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+geo\+\_\+utils.\+haversine\+\_\+distance}} (lat1, lon1, lat2, lon2)
+\begin{DoxyCompactList}\small\item\em Calculates the Haversine distance between two geographical coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module contains the implementation of the Haversine formula to calculate the distance between two geographical coordinates. 
+
+The Haversine formula is used to calculate the shortest distance between two points on the surface of a sphere (in this case, the Earth). It is commonly used in geolocation services. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{geo__utils_8py_a43be89ba5a0b419cb7e65f25a5716184}\label{geo__utils_8py_a43be89ba5a0b419cb7e65f25a5716184} 
+\index{geo\_utils.py@{geo\_utils.py}!haversine\_distance@{haversine\_distance}}
+\index{haversine\_distance@{haversine\_distance}!geo\_utils.py@{geo\_utils.py}}
+\doxysubsubsection{\texorpdfstring{haversine\_distance()}{haversine\_distance()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+utils.\+geo\+\_\+utils.\+haversine\+\_\+distance (\begin{DoxyParamCaption}\item[{}]{lat1,  }\item[{}]{lon1,  }\item[{}]{lat2,  }\item[{}]{lon2 }\end{DoxyParamCaption})}
+
+
+
+Calculates the Haversine distance between two geographical coordinates. 
+
+This function uses the Haversine formula to calculate the distance between two points on the Earth specified by their latitude and longitude coordinates. The result is returned in meters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat1} & The latitude of the first point, in degrees. \\
+\hline
+{\em lon1} & The longitude of the first point, in degrees. \\
+\hline
+{\em lat2} & The latitude of the second point, in degrees. \\
+\hline
+{\em lon2} & The longitude of the second point, in degrees. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance between the two points in meters.
+\end{DoxyReturn}
+\begin{DoxyVerb}Calculates the Haversine distance between two geographical coordinates.
+\end{DoxyVerb}
+ 

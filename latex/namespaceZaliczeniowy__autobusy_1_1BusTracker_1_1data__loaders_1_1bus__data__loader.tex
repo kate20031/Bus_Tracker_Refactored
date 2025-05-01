@@ -1,0 +1,75 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+loaders.\+bus\+\_\+data\+\_\+loader Namespace Reference}
+\hypertarget{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__data__loader}{}\label{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__data__loader}\index{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__data__loader_acb63244afb2b9855bdb5132f07c0b125}{load\+\_\+bus\+\_\+tracking\+\_\+data}} ()
+\item 
+\mbox{\hyperlink{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__data__loader_a821758dedcf4393403a6ff811874623c}{load\+\_\+bus\+\_\+stations\+\_\+coord}} ()
+\item 
+\mbox{\hyperlink{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__data__loader_ab6770e2ddcb0446fb28349ff2aae8a04}{load\+\_\+bus\+\_\+timetable\+\_\+data}} (busstop\+\_\+id, busstop\+\_\+nr, line)
+\item 
+\mbox{\hyperlink{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__data__loader_aec2f09ae734f55725fd0f04988df6b87}{load\+\_\+data}} (file\+\_\+path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package BusTrackerLoader
+This is a module for loading bus tracking
+data and bus stations' coordinates.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__data__loader_a821758dedcf4393403a6ff811874623c}\label{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__data__loader_a821758dedcf4393403a6ff811874623c} 
+\index{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader}!load\_bus\_stations\_coord@{load\_bus\_stations\_coord}}
+\index{load\_bus\_stations\_coord@{load\_bus\_stations\_coord}!Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader}}
+\doxysubsubsection{\texorpdfstring{load\_bus\_stations\_coord()}{load\_bus\_stations\_coord()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+loaders.\+bus\+\_\+data\+\_\+loader.\+load\+\_\+bus\+\_\+stations\+\_\+coord (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Loads bus station coordinates from the Warsaw public transport API.
+
+The result is processed and saved into a CSV file called `bus_station_output.csv`.
+
+@note Uses predefined parameters from BUS_STATION_API_PARAMS.
+\end{DoxyVerb}
+ \Hypertarget{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__data__loader_ab6770e2ddcb0446fb28349ff2aae8a04}\label{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__data__loader_ab6770e2ddcb0446fb28349ff2aae8a04} 
+\index{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader}!load\_bus\_timetable\_data@{load\_bus\_timetable\_data}}
+\index{load\_bus\_timetable\_data@{load\_bus\_timetable\_data}!Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader}}
+\doxysubsubsection{\texorpdfstring{load\_bus\_timetable\_data()}{load\_bus\_timetable\_data()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+loaders.\+bus\+\_\+data\+\_\+loader.\+load\+\_\+bus\+\_\+timetable\+\_\+data (\begin{DoxyParamCaption}\item[{}]{busstop\+\_\+id,  }\item[{}]{busstop\+\_\+nr,  }\item[{}]{line }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Retrieves a specific timetable entry from the API for a given stop and line.
+
+@param busstop_id Identifier of the bus stop group ("zespol").
+@param busstop_nr Identifier of the specific stop within the group ("slupek").
+@param line Bus line number (e.g., "503").
+
+@return JSON response with the timetable data.
+\end{DoxyVerb}
+ \Hypertarget{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__data__loader_acb63244afb2b9855bdb5132f07c0b125}\label{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__data__loader_acb63244afb2b9855bdb5132f07c0b125} 
+\index{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader}!load\_bus\_tracking\_data@{load\_bus\_tracking\_data}}
+\index{load\_bus\_tracking\_data@{load\_bus\_tracking\_data}!Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader}}
+\doxysubsubsection{\texorpdfstring{load\_bus\_tracking\_data()}{load\_bus\_tracking\_data()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+loaders.\+bus\+\_\+data\+\_\+loader.\+load\+\_\+bus\+\_\+tracking\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Periodically loads real-time bus tracking data from the API.
+
+This function runs up to one hour and queries the API every 60 seconds
+to fetch real-time bus location data. Based on the time of day, it stores
+the results in either `BUS_OUT1_FILE` or `BUS_OUT2_FILE`.
+
+@note Uses constants EARLY_HOURS and LATE_HOURS to determine output destination.
+\end{DoxyVerb}
+ \Hypertarget{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__data__loader_aec2f09ae734f55725fd0f04988df6b87}\label{namespaceZaliczeniowy__autobusy_1_1BusTracker_1_1data__loaders_1_1bus__data__loader_aec2f09ae734f55725fd0f04988df6b87} 
+\index{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader}!load\_data@{load\_data}}
+\index{load\_data@{load\_data}!Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader@{Zaliczeniowy\_autobusy.BusTracker.data\_loaders.bus\_data\_loader}}
+\doxysubsubsection{\texorpdfstring{load\_data()}{load\_data()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+loaders.\+bus\+\_\+data\+\_\+loader.\+load\+\_\+data (\begin{DoxyParamCaption}\item[{}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Loads bus data from a CSV file and returns a DataFrame.
+
+@param file_path Path to the CSV file containing processed bus data.
+@return pandas.DataFrame Parsed data with date parsing applied to the 'Time' column.
+\end{DoxyVerb}
+ 

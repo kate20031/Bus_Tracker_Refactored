@@ -1,0 +1,71 @@
+\doxysection{Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+punctuality\+\_\+analyzer.\+Punctuality\+Analyzer Class Reference}
+\hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1punctuality__analyzer_1_1PunctualityAnalyzer}{}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1punctuality__analyzer_1_1PunctualityAnalyzer}\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.punctuality\_analyzer.PunctualityAnalyzer@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.punctuality\_analyzer.PunctualityAnalyzer}}
+
+
+Compares real-\/time bus data with timetable entries to assess punctuality.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1punctuality__analyzer_1_1PunctualityAnalyzer_a0d97672a2c63f955f68aa9217047a1ed}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, timetable\+\_\+checker\+\_\+cls=\mbox{\hyperlink{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1timetable__checker_1_1TimetableChecker}{Timetable\+Checker}})
+\begin{DoxyCompactList}\small\item\em Constructor for Punctuality\+Analyzer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1punctuality__analyzer_1_1PunctualityAnalyzer_aef3adc9d316dbe182d7ac9e576b131dc}{analyze}} (self, df)
+\begin{DoxyCompactList}\small\item\em Performs the punctuality analysis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1punctuality__analyzer_1_1PunctualityAnalyzer_a4707785c6a77d15b2f408926be841088}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1punctuality__analyzer_1_1PunctualityAnalyzer_a4707785c6a77d15b2f408926be841088} 
+{\bfseries timetable\+\_\+checker\+\_\+cls}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Compares real-\/time bus data with timetable entries to assess punctuality. 
+
+For each unique stop and line combination, the analyzer loads the timetable data and compares each real-\/time arrival to determine if it falls within an acceptable time range. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1punctuality__analyzer_1_1PunctualityAnalyzer_a0d97672a2c63f955f68aa9217047a1ed}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1punctuality__analyzer_1_1PunctualityAnalyzer_a0d97672a2c63f955f68aa9217047a1ed} 
+\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.punctuality\_analyzer.PunctualityAnalyzer@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.punctuality\_analyzer.PunctualityAnalyzer}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Zaliczeniowy\_autobusy.BusTracker.data\_processing.punctuality\_analyzer.PunctualityAnalyzer@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.punctuality\_analyzer.PunctualityAnalyzer}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+punctuality\+\_\+analyzer.\+Punctuality\+Analyzer.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{timetable\+\_\+checker\+\_\+cls = {\ttfamily \mbox{\hyperlink{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1timetable__checker_1_1TimetableChecker}{Timetable\+Checker}}} }\end{DoxyParamCaption})}
+
+
+
+Constructor for Punctuality\+Analyzer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timetable\+\_\+checker\+\_\+cls} & Class used to check timetable-\/related logic (default\+: Timetable\+Checker). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1punctuality__analyzer_1_1PunctualityAnalyzer_aef3adc9d316dbe182d7ac9e576b131dc}\label{classZaliczeniowy__autobusy_1_1BusTracker_1_1data__processing_1_1punctuality__analyzer_1_1PunctualityAnalyzer_aef3adc9d316dbe182d7ac9e576b131dc} 
+\index{Zaliczeniowy\_autobusy.BusTracker.data\_processing.punctuality\_analyzer.PunctualityAnalyzer@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.punctuality\_analyzer.PunctualityAnalyzer}!analyze@{analyze}}
+\index{analyze@{analyze}!Zaliczeniowy\_autobusy.BusTracker.data\_processing.punctuality\_analyzer.PunctualityAnalyzer@{Zaliczeniowy\_autobusy.BusTracker.data\_processing.punctuality\_analyzer.PunctualityAnalyzer}}
+\doxysubsubsection{\texorpdfstring{analyze()}{analyze()}}
+{\footnotesize\ttfamily Zaliczeniowy\+\_\+autobusy.\+Bus\+Tracker.\+data\+\_\+processing.\+punctuality\+\_\+analyzer.\+Punctuality\+Analyzer.\+analyze (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{df }\end{DoxyParamCaption})}
+
+
+
+Performs the punctuality analysis. 
+
+For each record in the input Data\+Frame, compares real-\/time arrival against the timetable and determines if it is punctual.
+
+
+\begin{DoxyParams}{Parameters}
+{\em df} & pandas.\+Data\+Frame containing columns "{}\+Zespol"{}, "{}\+Slupek"{}, "{}\+Lines"{}, and "{}\+Time"{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pandas.\+Data\+Frame with records considered punctual. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Zaliczeniowy\+\_\+autobusy/\+Bus\+Tracker/data\+\_\+processing/\mbox{\hyperlink{punctuality__analyzer_8py}{punctuality\+\_\+analyzer.\+py}}\end{DoxyCompactItemize}
